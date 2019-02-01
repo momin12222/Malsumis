@@ -5,20 +5,42 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed;
-    private Rigidbody2D rb2d;
     
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        
     }
 
     public void PlayerMovement()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-
+        Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         transform.Translate(Time.deltaTime * speed * movement);
+    }
+
+    public void PlayerMovement4axis()
+    {
+        Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (movement.x < 0) //left
+        {
+            
+        }
+        else if (movement.x > 0) //right
+        {
+
+        }
+        else if (movement.y < 0) //down
+        {
+
+        }
+        else if (movement.y > 0) //up
+        {
+
+        }
+    }
+
+    public void MoveForward()
+    {
+        transform.Translate(Time.deltaTime * speed, 0f, 0f);
+        //add stop at point or whatever
     }
 }

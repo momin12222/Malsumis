@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         movementScript = GetComponent<Movement>();
+        healthScript = GetComponent<Health>();
     }
 
     void Update()
@@ -17,4 +18,5 @@ public class PlayerController : MonoBehaviour
         movementScript.PlayerMovement();
     }
 
+    
 }
