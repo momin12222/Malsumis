@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    private int startHP = 3;
+    public int startHP;
     public int currentHP;
     
     //health bar
@@ -20,7 +20,11 @@ public class Health : MonoBehaviour
 
     public void TakeDemange(int amount)
     {
-        currentHP += amount;
+        currentHP -= amount;
+        if (currentHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void TakeDamageWithUpdate(int amount)

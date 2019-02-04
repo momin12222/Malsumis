@@ -5,16 +5,28 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     Movement movementScript;
-    Health healthScript; //on collision call take dmg with update
-    
+    Health healthScript; 
+    Shoot shootingScript;
+    public Transform spawnPoint;
+
     void Start()
     {
         movementScript = GetComponent<Movement>();
         healthScript = GetComponent<Health>();
+        shootingScript = GetComponent<Shoot>();
     }
 
     void Update()
     {
         movementScript.MoveForward();
+        shootingScript.ShootBullet(spawnPoint);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "PlayerBullet")
+        {
+            healthScript.TakeDemange(2);
+        }
     }
 }
