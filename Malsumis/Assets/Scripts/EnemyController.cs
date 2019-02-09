@@ -20,6 +20,10 @@ public class EnemyController : MonoBehaviour
     {
         movementScript.MoveForward();
         shootingScript.ShootBullet(spawnPoint);
+        if (transform.position.x < -20)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
