@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
     public void TakeDemange(int amount)
     {
         currentHP -= amount;
-        if (currentHP <= 0)
+        if (currentHP <= 0 && gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
         }

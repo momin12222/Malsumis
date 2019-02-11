@@ -5,10 +5,6 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed;
-    
-    void Start()
-    {
-    }
 
     public void PlayerMovement()
     {
@@ -19,6 +15,10 @@ public class Movement : MonoBehaviour
     public void MoveForward()
     {
         transform.Translate(Time.deltaTime * speed, 0f, 0f);
-        //add stop at point or whatever
+    }
+
+    public void MoveToPoint(Transform point)
+    {
+        transform.position = Vector2.MoveTowards(transform.position, point.position, speed * Time.deltaTime);
     }
 }
