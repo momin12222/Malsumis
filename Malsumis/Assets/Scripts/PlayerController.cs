@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     Movement movementScript;
     Health healthScript; 
     Shoot shootingScript;
-    Bounds boudingSctipt;
+    //Bounds boudingSctipt;
     public Transform spawnPoint;
 
     //public bool leftButtons;
@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
         movementScript = GetComponent<Movement>();
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
-        boudingSctipt = GetComponent<Bounds>();
+        //boudingSctipt = GetComponent<Bounds>();
     }
 
     void Update()
@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
         {
             shootingScript.ShootBullet(spawnPoint);
         }
-        //boudingSctipt.BoundObject();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
