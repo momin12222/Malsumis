@@ -22,7 +22,7 @@ public class AlienController : MonoBehaviour
         if (Time.time > fireCooldown)
         {
             fireCooldown = Time.time + shootingScript.fireRate;
-            shootingScript.ShootBullet(spawnPoint);
+            //shootingScript.ShootBullet(spawnPoint);
         }
     }
 }
