@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AlienController : MonoBehaviour
 {
@@ -8,7 +9,10 @@ public class AlienController : MonoBehaviour
     Shoot shootingScript;
     public Transform alienPoint;
     public Transform spawnPoint;
+    public float fireRate;
     private float fireCooldown;
+
+    public Image fireballIndicator;
 
     void Start()
     {
@@ -19,10 +23,16 @@ public class AlienController : MonoBehaviour
     void Update()
     {
         movementScript.MoveToPoint(alienPoint);
-        if (Time.time > fireCooldown)
+        if (Input.GetKey(KeyCode.E) && Time.time > fireCooldown)
         {
-            fireCooldown = Time.time + shootingScript.fireRate;
-            //shootingScript.ShootBullet(spawnPoint);
+            fireCooldown = Time.time + fireRate;
+            shootingScript.ShootBullet(spawnPoint);
+            fireballIndicator.gameObject.SetActive(false);
+        }
+        
+        if (fireCooldown > Time.time + fireRate)
+        { 
+            fireballIndicator.gameObject.SetActive(true);
         }
     }
 }

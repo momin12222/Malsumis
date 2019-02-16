@@ -33,5 +33,10 @@ public class EnemyController : MonoBehaviour
             healthScript.TakeDemange(2);
             Destroy(other.gameObject);
         }
+        if (other.gameObject.tag == "Fireball")
+        {
+            healthScript.TakeDemange(6);
+            Destroy(other.gameObject);
+        }
     }
 }
