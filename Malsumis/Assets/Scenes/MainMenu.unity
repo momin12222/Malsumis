@@ -340,7 +340,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Add controls \nand other stuff \nhere"
+  m_Text: Malsumis
 --- !u!222 &606358979
 CanvasRenderer:
   m_ObjectHideFlags: 0

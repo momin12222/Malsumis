@@ -29,9 +29,9 @@ public class AlienController : MonoBehaviour
             shootingScript.ShootBullet(spawnPoint);
             fireballIndicator.gameObject.SetActive(false);
         }
-        
-        if (fireCooldown > Time.time + fireRate)
-        { 
+
+        if (Time.time > fireCooldown)
+        {
             fireballIndicator.gameObject.SetActive(true);
         }
     }
