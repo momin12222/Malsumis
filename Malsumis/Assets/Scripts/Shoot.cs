@@ -18,4 +18,18 @@ public class Shoot : MonoBehaviour
         }
     }
 
+    public void Dash(Transform spawnPoint)
+    {
+        //do the dash
+
+        //move forward and activate collider 
+    }
+
+    public void Fireball(Transform spawnPoint)
+    {
+        //make it happen few times
+        ShootBullet(spawnPoint);
+    }
+
+
 }
