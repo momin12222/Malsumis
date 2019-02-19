@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
 {
     Movement movementScript;
     public Transform endPoint;
+    public float speed;
 
     void Start()
     {
@@ -14,7 +15,7 @@ public class BulletController : MonoBehaviour
 
     void Update()
     {
-        movementScript.MoveForward();
+        movementScript.MoveForward(speed);
         if (transform.position.x > 20 || transform.position.x < -20)
         {
             Destroy(gameObject);

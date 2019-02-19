@@ -9,9 +9,7 @@ public class PlayerController : MonoBehaviour
     Shoot shootingScript;
     //Bounds boudingSctipt;
     public Transform spawnPoint;
-
-    //public bool leftButtons;
-    //just add buttons to pass in function
+    public float speed;
 
     void Start()
     {
@@ -23,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        movementScript.PlayerMovement();
+        movementScript.PlayerMovement(speed);
         if (Input.GetKey(KeyCode.Space))
         {
             shootingScript.ShootBullet(spawnPoint);

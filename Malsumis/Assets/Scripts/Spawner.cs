@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
     public void Spawn()
     {
         spawnPos.x = transform.position.x;
-        spawnPos.y = Random.Range(-10, 5);
+        spawnPos.y = Random.Range(-7, 6);
         spawnPos.z = transform.position.z;
 
         if (Time.time > cooldown)

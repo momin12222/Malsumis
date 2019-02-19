@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     Health healthScript; 
     Shoot shootingScript;
     public Transform spawnPoint;
+    public float speed;
 
     void Start()
     {
@@ -18,7 +19,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        movementScript.MoveForward();
+        movementScript.MoveForward(speed);
         shootingScript.ShootBullet(spawnPoint);
         if (transform.position.x < -20)
         {
@@ -35,8 +36,12 @@ public class EnemyController : MonoBehaviour
         }
         if (other.gameObject.tag == "Fireball")
         {
-            healthScript.TakeDemange(6);
+            healthScript.TakeDemange(healthScript.currentHP);
             Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "Dash")
+        {
+            healthScript.TakeDemange(healthScript.currentHP);
         }
     }
 }

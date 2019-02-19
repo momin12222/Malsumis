@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundController : MonoBehaviour
 {
     Movement movementScript;
-
+    public float speed;
     public float length;
 
     void Start()
@@ -15,7 +15,7 @@ public class BackgroundController : MonoBehaviour
 
     void Update()
     {
-        movementScript.MoveForward();
+        movementScript.MoveForward(speed);
 
         if (transform.position.x < -length)
         {
