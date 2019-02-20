@@ -7,7 +7,13 @@ public class Movement : MonoBehaviour
     public void PlayerMovement(float speed)
     {
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        transform.Translate(Time.deltaTime * speed * movement);
+        //if (transform.position.x > -15 && transform.position.x < 15)
+        //{
+        //    if (transform.position.y > -8 && transform.position.y < 4)    
+        //    {
+                transform.Translate(Time.deltaTime * speed * movement);
+        //    }
+        //}
     }
 
     public void MoveForward(float speed)

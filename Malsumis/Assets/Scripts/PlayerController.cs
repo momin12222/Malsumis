@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         movementScript.PlayerMovement(speed);
+     
         if (Input.GetKey(KeyCode.Space))
         {
             shootingScript.ShootBullet(spawnPoint);
