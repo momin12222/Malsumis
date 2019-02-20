@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     Movement movementScript;
     Health healthScript; 
     Shoot shootingScript;
+    AlienController alienScript;
     public Transform spawnPoint;
     public float speed;
 

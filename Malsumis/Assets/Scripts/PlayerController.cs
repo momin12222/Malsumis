@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyBullet")
         {
-            healthScript.TakeDemange(2);
+            healthScript.TakeDamageWithUpdate(1);
             Destroy(other.gameObject);
         }
     }

@@ -30,6 +30,8 @@ public class AlienController : MonoBehaviour
     private KeyCode dashKey;
     private KeyCode fireballKey;
 
+    //public int killCount;
+
     void Start()
     {
         movementScript = GetComponent<Movement>();

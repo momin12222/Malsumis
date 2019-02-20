@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 326412182}
   - component: {fileID: 326412181}
   m_Layer: 5
-  m_Name: HP1 (4)
+  m_Name: HP3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1326,7 +1326,7 @@ GameObject:
   - component: {fileID: 838332771}
   - component: {fileID: 838332770}
   m_Layer: 5
-  m_Name: HP1 (5)
+  m_Name: HP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1479,7 +1479,7 @@ GameObject:
   - component: {fileID: 1088279536}
   - component: {fileID: 1088279535}
   m_Layer: 5
-  m_Name: HP1 (3)
+  m_Name: HP5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1583,7 +1583,7 @@ GameObject:
   - component: {fileID: 1171823007}
   - component: {fileID: 1171823006}
   m_Layer: 5
-  m_Name: HP1
+  m_Name: HP6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1759,13 +1759,12 @@ MonoBehaviour:
   startHP: 6
   currentHP: 0
   healthImages:
-  - {fileID: 1171823006}
-  - {fileID: 1088279535}
-  - {fileID: 1522815816}
-  - {fileID: 326412181}
-  - {fileID: 2114432386}
-  - {fileID: 838332770}
-  healthSprites: []
+  - {fileID: 838332768}
+  - {fileID: 2114432384}
+  - {fileID: 326412179}
+  - {fileID: 1522815814}
+  - {fileID: 1088279533}
+  - {fileID: 1171823004}
 --- !u!114 &1247219589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2556,7 +2555,7 @@ GameObject:
   - component: {fileID: 1522815817}
   - component: {fileID: 1522815816}
   m_Layer: 5
-  m_Name: HP1 (1)
+  m_Name: HP4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3183,7 +3182,7 @@ GameObject:
   - component: {fileID: 2114432387}
   - component: {fileID: 2114432386}
   m_Layer: 5
-  m_Name: HP1 (2)
+  m_Name: HP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
