@@ -52,7 +52,7 @@ public class AlienController : MonoBehaviour
         if (dashing)
         {
             dashPoint.transform.position = new Vector3(dashPoint.position.x, transform.position.y, transform.position.z);
-            movementScript.MoveToPoint(dashPoint, speed * 3);
+            movementScript.MoveToPoint(dashPoint, speed * 4);
             if (transform.position == dashPoint.position)
             {
                 dashing = false;
