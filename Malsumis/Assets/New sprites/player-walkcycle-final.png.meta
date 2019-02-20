@@ -5,6 +5,7 @@ TextureImporter:
     21300000: player-walkcycle-final_0
     21300002: player-walkcycle-final_1
     21300004: player-walkcycle-final_3
+    21300006: player-walkcycle-final_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -95,13 +96,13 @@ TextureImporter:
         width: 283
         height: 456
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc4d1a1d8f051724aa1d7ccb2cf2acd9
+      spriteID: 23f3c59ecf4b9cc4286ab5558d537208
       vertices: []
       indices: 
       edges: []
@@ -115,33 +116,33 @@ TextureImporter:
         width: 261
         height: 456
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1c1f5827dba67a419dd21019c81beea
+      spriteID: 024515358e554384fafb269080a1e434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-walkcycle-final_3
+      name: player-walkcycle-final_2
       rect:
         serializedVersion: 2
         x: 543
-        y: 11
+        y: 0
         width: 256
-        height: 445
+        height: 456
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87cd963c1d17a4345a77f260dd353d64
+      spriteID: 12f2d4766191ac84d934a7e5c74e63a6
       vertices: []
       indices: 
       edges: []
