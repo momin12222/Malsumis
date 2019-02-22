@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public Transform spawnPoint;
     public float speed;
 
+    public int enemyDmg;
+    public int dashDmg;
+    public int fireballDmg;
+
     void Start()
     {
         movementScript = GetComponent<Movement>();
@@ -33,7 +37,17 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyBullet")
         {
-            healthScript.TakeDamageWithUpdate(1);
+            healthScript.TakeDamageWithUpdate(enemyDmg);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "BossFireball")
+        {
+            healthScript.TakeDamageWithUpdate(dashDmg);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "BossDash")
+        {
+            healthScript.TakeDamageWithUpdate(fireballDmg);
             Destroy(other.gameObject);
         }
     }

@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     AlienController alienScript;
     public Transform spawnPoint;
     public float speed;
+    public int playerDmg;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.gameObject.tag == "PlayerBullet")
         {
-            healthScript.TakeDemange(2);
+            healthScript.TakeDemange(playerDmg);
             Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Fireball")

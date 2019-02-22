@@ -10,9 +10,11 @@ public class BossController : MonoBehaviour
     Shoot shootingScript;
     public Transform spawnPoint;
     public Transform dashPoint;
+    public Transform endPoint;
     public GameObject dashCollider;
 
     public float speed;
+    private Transform startPos;
 
     public float dashRate;
     public float fireRate;
@@ -37,7 +39,7 @@ public class BossController : MonoBehaviour
     {
         if (dashing)
         {
-            movementScript.MoveToPoint(dashPoint, speed * 4);
+            movementScript.MoveToPoint(dashPoint, speed);
             if (transform.position == dashPoint.position)
             {
                 dashing = false;
@@ -46,7 +48,7 @@ public class BossController : MonoBehaviour
         }
         else
         {
-            //movementScript.MoveToPoint(alienPoint, speed);
+            movementScript.MoveToPoint(endPoint, speed);
         }
 
         if (Time.time > dashCooldown)
@@ -70,11 +72,11 @@ public class BossController : MonoBehaviour
 
     void Dash()
     {
+        dashing = true;
         dashPoint.transform.position = new Vector3(dashPoint.position.x, transform.position.y, transform.position.z);
         dashCollider.gameObject.SetActive(true);
         dashCooldown = Time.time + dashRate;
         dashIndicator.gameObject.SetActive(false);
-        dashing = true;
     }
 
     void Fireball()

@@ -34,8 +34,6 @@ public class Health : MonoBehaviour
 
     void updateHearts()
     {
-        //currentHP = Mathf.Clamp(currentHP, 0, startHP);
         healthImages[currentHP].SetActive(false);
-        
     }
 }
