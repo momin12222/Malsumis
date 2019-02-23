@@ -4,18 +4,36 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject prefab;
+    public GameObject prefab1;
+    public GameObject prefab2;
+    public GameObject prefab3;
     public float time;
+    public int range1;
+    public int range2;
+    public int range3;
 
     private float cooldown;
     private Vector3 spawnPos;
+    private int killCount;
 
     private void Update()
     {
-        Spawn();
+        killCount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount;
+        if (killCount >= 0 && killCount <= range1)
+        {
+            Spawn(prefab1);
+        }
+        else if (killCount >= range1 && killCount <= range2)
+        {
+            Spawn(prefab2);
+        }
+        else if (killCount >= range2 && killCount <= range3)
+        {
+            Spawn(prefab3);
+        }
     }
 
-    public void Spawn()
+    public void Spawn(GameObject prefab)
     {
         spawnPos.x = transform.position.x;
         spawnPos.y = Random.Range(-7, 5);

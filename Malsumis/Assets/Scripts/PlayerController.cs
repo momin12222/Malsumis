@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     //Bounds boudingSctipt;
     public Transform spawnPoint;
     public float speed;
+    public int killCount;
 
     public int enemyDmg;
     public int dashDmg;

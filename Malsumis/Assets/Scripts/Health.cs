@@ -22,6 +22,7 @@ public class Health : MonoBehaviour
         currentHP -= amount;
         if (currentHP <= 0 && gameObject.tag == "Enemy")
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount++;
             Destroy(gameObject);
         }
     }

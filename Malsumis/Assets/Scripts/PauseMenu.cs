@@ -21,10 +21,10 @@ public class PauseMenu : MonoBehaviour {
         {
             Resume();
         }
-        else if (GetComponent<Health>().currentHP == 0)
+        else if (GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().currentHP == 0)
         {
             Death();
-            GetComponent<Health>().currentHP = GetComponent<Health>().startHP;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().currentHP = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().startHP;
         }
     }
 

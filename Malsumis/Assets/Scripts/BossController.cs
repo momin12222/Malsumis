@@ -26,7 +26,6 @@ public class BossController : MonoBehaviour
     public Image dashIndicator;
     public Image fireballIndicator;
 
-    // Start is called before the first frame update
     void Start()
     {
         movementScript = GetComponent<Movement>();
@@ -34,7 +33,6 @@ public class BossController : MonoBehaviour
         shootingScript = GetComponent<Shoot>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (dashing)
