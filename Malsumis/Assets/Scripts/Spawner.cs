@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -27,9 +28,13 @@ public class Spawner : MonoBehaviour
         {
             Spawn(prefab2);
         }
-        else if (killCount >= range2 && killCount <= range3)
+        else if (killCount >= range2 && killCount < range3)
         {
             Spawn(prefab3);
+        }
+        if (killCount == range3)
+        {
+            SceneManager.LoadScene("BossLevel");
         }
     }
 

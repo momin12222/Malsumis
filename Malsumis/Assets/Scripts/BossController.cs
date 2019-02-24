@@ -31,6 +31,8 @@ public class BossController : MonoBehaviour
         movementScript = GetComponent<Movement>();
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
+        dashCooldown = dashRate;
+        fireCooldown = fireRate;
     }
 
     void Update()

@@ -2195,9 +2195,9 @@ MonoBehaviour:
   prefab2: {fileID: 3879906452053614551, guid: a78a6117a6b4a6f438a5f592811f2925, type: 3}
   prefab3: {fileID: 3879906452053614551, guid: 1c7d8d897d45e204785230e4c60a35ec, type: 3}
   time: 5
-  range1: 5
-  range2: 10
-  range3: 15
+  range1: 3
+  range2: 4
+  range3: 5
 --- !u!4 &1472749068
 Transform:
   m_ObjectHideFlags: 0
