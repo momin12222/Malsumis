@@ -867,6 +867,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 458358608}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &458358610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5042554435902904157, guid: a60d7d0123ca0cb4d852fddf4751792f,
+    type: 3}
+  m_PrefabInstance: {fileID: 458358608}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &460484404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3132,6 +3144,11 @@ PrefabInstance:
       propertyPath: healthImages.Array.data[5]
       value: 
       objectReference: {fileID: 1171823004}
+    - target: {fileID: 643650352888299175, guid: 73f84381bfe3e51469a19199f1d9858d,
+        type: 3}
+      propertyPath: progressBar
+      value: 
+      objectReference: {fileID: 458358610}
     - target: {fileID: 643650352888299181, guid: 73f84381bfe3e51469a19199f1d9858d,
         type: 3}
       propertyPath: pauseMenu

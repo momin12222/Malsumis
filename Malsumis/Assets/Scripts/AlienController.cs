@@ -13,16 +13,14 @@ public class AlienController : MonoBehaviour
     public GameObject dashCollider;
 
     public float speed;
-
-    public int dashCounter;
-    public int fireballCounter;
     public float dashRate;
     public float fireRate;
     private float dashCooldown;
     private float fireCooldown;
 
     private bool dashing;
-    //private bool fireballActive;
+    public bool dashActive;
+    public bool fireballActive;
     public Image dashIndicator;
     public Image fireballIndicator;
 
@@ -46,7 +44,6 @@ public class AlienController : MonoBehaviour
             dashKey = KeyCode.O;
             fireballKey = KeyCode.P;
         }
-
     }
 
     void Update()
@@ -65,7 +62,7 @@ public class AlienController : MonoBehaviour
             movementScript.MoveToPoint(alienPoint, speed);
         }
 
-        if (dashCounter > 0)
+        if (dashActive)
         {
             if (Input.GetKey(dashKey) && Time.time > dashCooldown)
             {
@@ -77,7 +74,7 @@ public class AlienController : MonoBehaviour
             }
         }
 
-        if (fireballCounter > 0)
+        if (fireballActive)
         {
             if (Input.GetKey(fireballKey) && Time.time > fireCooldown)
             {
@@ -96,7 +93,6 @@ public class AlienController : MonoBehaviour
         dashCollider.gameObject.SetActive(true);
         dashCooldown = Time.time + dashRate;
         dashIndicator.gameObject.SetActive(false);
-        dashCounter--;
         dashing = true;
     }
 
@@ -104,7 +100,6 @@ public class AlienController : MonoBehaviour
     {
         fireCooldown = Time.time + fireRate;
         fireballIndicator.gameObject.SetActive(false);
-        fireballCounter--;
         shootingScript.Fireball(spawnPoint);
     }
 

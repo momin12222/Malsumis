@@ -12,6 +12,7 @@ TagManager:
   - Dash
   - BossFireball
   - BossDash
+  - Alien
   layers:
   - Default
   - TransparentFX

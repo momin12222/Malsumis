@@ -20,17 +20,19 @@ public class Spawner : MonoBehaviour
     private void Update()
     {
         killCount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount;
-        if (killCount >= 0 && killCount <= range1)
+        if (killCount >= 0 && killCount < range1)
         {
             Spawn(prefab1);
         }
-        else if (killCount >= range1 && killCount <= range2)
+        else if (killCount >= range1 && killCount < range2)
         {
             Spawn(prefab2);
+            GameObject.FindGameObjectWithTag("Alien").GetComponent<AlienController>().dashActive = true;
         }
         else if (killCount >= range2 && killCount < range3)
         {
             Spawn(prefab3);
+            GameObject.FindGameObjectWithTag("Alien").GetComponent<AlienController>().fireballActive = true;
         }
         if (killCount == range3)
         {
