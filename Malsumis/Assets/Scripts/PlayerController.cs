@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     //Bounds boudingSctipt;
     public Transform spawnPoint;
     public float speed;
-    public int killCount;
 
     public int enemyDmg;
     public int dashDmg;
@@ -25,7 +24,8 @@ public class PlayerController : MonoBehaviour
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
         //boudingSctipt = GetComponent<Bounds>();
-        progressBar.value = killCount;
+        progressBar.maxValue = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().range * 3;
+        progressBar.value = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount; ;
     }
 
     void Update()
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
             shootingScript.ShootBullet(spawnPoint);
         }
 
-        progressBar.value = killCount;
+        progressBar.value = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

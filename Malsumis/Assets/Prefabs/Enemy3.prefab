@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2440046723299207613}
   m_Layer: 0
   m_Name: Enemy3
-  m_TagString: Enemy
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 3879906452532790805}
-  speed: -7
+  speed: -9
   playerDmg: 1
 --- !u!114 &3879906452053614544
 MonoBehaviour:

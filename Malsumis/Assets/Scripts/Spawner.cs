@@ -9,32 +9,31 @@ public class Spawner : MonoBehaviour
     public GameObject prefab2;
     public GameObject prefab3;
     public float time;
-    public int range1;
-    public int range2;
-    public int range3;
+    public float timeMin;
+    public float timeMax;
+    public int range;
 
     private float cooldown;
     private Vector3 spawnPos;
-    private int killCount;
+    public float killCount;
 
     private void Update()
     {
-        killCount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount;
-        if (killCount >= 0 && killCount < range1)
+        if (killCount >= 0 && killCount < range)
         {
             Spawn(prefab1);
         }
-        else if (killCount >= range1 && killCount < range2)
-        {
+        if (killCount >= range && killCount < range * 2)
+        {  
             Spawn(prefab2);
             GameObject.FindGameObjectWithTag("Alien").GetComponent<AlienController>().dashActive = true;
         }
-        else if (killCount >= range2 && killCount < range3)
+        if (killCount >= range * 2 && killCount < range * 3)
         {
             Spawn(prefab3);
             GameObject.FindGameObjectWithTag("Alien").GetComponent<AlienController>().fireballActive = true;
         }
-        if (killCount == range3)
+        if (killCount == range * 3)
         {
             SceneManager.LoadScene("BossLevel");
         }
@@ -48,8 +47,16 @@ public class Spawner : MonoBehaviour
 
         if (Time.time > cooldown)
         {
+            time = Random.Range(timeMin, timeMax);
             cooldown = Time.time + time;
             Instantiate(prefab, spawnPos, transform.rotation);
         }
+    }
+
+    IEnumerator LoadBoss()
+    {
+        print("here");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("BossLevel");
     }
 }

@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - New tag
-  - Enemy
   - EnemyBullet
   - PlayerBullet
   - Fireball
@@ -13,6 +12,11 @@ TagManager:
   - BossFireball
   - BossDash
   - Alien
+  - Enemy1
+  - Enemy2
+  - Enemy3
+  - Spwaner
+  - Spawner
   layers:
   - Default
   - TransparentFX

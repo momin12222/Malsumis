@@ -20,10 +20,31 @@ public class Health : MonoBehaviour
     public void TakeDemange(int amount)
     {
         currentHP -= amount;
-        if (currentHP <= 0 && gameObject.tag == "Enemy")
+        if (currentHP <= 0)
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount++;
-            Destroy(gameObject);
+            //if (gameObject.tag == "Enemy1" || gameObject.tag == "Enemy2" || gameObject.tag == "Enemy3")
+            //{
+            //    GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount++;
+            //    Destroy(gameObject);
+            //}
+            if (gameObject.tag == "Enemy1")
+            {
+                GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount+=0.5f;
+                //GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().enemy1++;
+                Destroy(gameObject);
+            }
+            else if (gameObject.tag == "Enemy2")
+            {
+                GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount+=0.5f;
+                //GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().enemy2++;
+                Destroy(gameObject);
+            }
+            else if (gameObject.tag == "Enemy3")
+            {
+                GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount++;
+                //GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().enemy3++;
+                Destroy(gameObject);
+            }
         }
     }
 
