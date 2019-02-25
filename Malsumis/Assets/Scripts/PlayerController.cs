@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,12 +17,15 @@ public class PlayerController : MonoBehaviour
     public int dashDmg;
     public int fireballDmg;
 
+    public Slider progressBar;
+
     void Start()
     {
         movementScript = GetComponent<Movement>();
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
         //boudingSctipt = GetComponent<Bounds>();
+        progressBar.value = killCount;
     }
 
     void Update()
@@ -32,6 +36,8 @@ public class PlayerController : MonoBehaviour
         {
             shootingScript.ShootBullet(spawnPoint);
         }
+
+        progressBar.value = killCount;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
