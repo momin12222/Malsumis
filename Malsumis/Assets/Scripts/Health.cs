@@ -29,19 +29,19 @@ public class Health : MonoBehaviour
             //}
             if (gameObject.tag == "Enemy1")
             {
-                GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount+=0.5f;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount+=0.5f;
                 //GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().enemy1++;
                 Destroy(gameObject);
             }
             else if (gameObject.tag == "Enemy2")
             {
-                GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount+=0.5f;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount+=0.5f;
                 //GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().enemy2++;
                 Destroy(gameObject);
             }
             else if (gameObject.tag == "Enemy3")
             {
-                GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount++;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount++;
                 //GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().enemy3++;
                 Destroy(gameObject);
             }

@@ -3059,6 +3059,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player place holder
       objectReference: {fileID: 0}
+    - target: {fileID: 643650352888299181, guid: 73f84381bfe3e51469a19199f1d9858d,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1279918861}
+    - target: {fileID: 643650352888299181, guid: 73f84381bfe3e51469a19199f1d9858d,
+        type: 3}
+      propertyPath: screenText
+      value: 
+      objectReference: {fileID: 913387307}
+    - target: {fileID: 643650352888299181, guid: 73f84381bfe3e51469a19199f1d9858d,
+        type: 3}
+      propertyPath: resume
+      value: 
+      objectReference: {fileID: 480201128}
     - target: {fileID: 643650352888299176, guid: 73f84381bfe3e51469a19199f1d9858d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3149,20 +3164,5 @@ PrefabInstance:
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 458358610}
-    - target: {fileID: 643650352888299181, guid: 73f84381bfe3e51469a19199f1d9858d,
-        type: 3}
-      propertyPath: pauseMenu
-      value: 
-      objectReference: {fileID: 1279918861}
-    - target: {fileID: 643650352888299181, guid: 73f84381bfe3e51469a19199f1d9858d,
-        type: 3}
-      propertyPath: screenText
-      value: 
-      objectReference: {fileID: 913387307}
-    - target: {fileID: 643650352888299181, guid: 73f84381bfe3e51469a19199f1d9858d,
-        type: 3}
-      propertyPath: resume
-      value: 
-      objectReference: {fileID: 480201128}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73f84381bfe3e51469a19199f1d9858d, type: 3}

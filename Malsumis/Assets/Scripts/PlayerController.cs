@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public int fireballDmg;
 
     public Slider progressBar;
+    //add killcount on player
+    public float killCount;
 
     void Start()
     {
@@ -24,8 +26,8 @@ public class PlayerController : MonoBehaviour
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
         //boudingSctipt = GetComponent<Bounds>();
-        progressBar.maxValue = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().range * 3;
-        progressBar.value = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount; ;
+        progressBar.maxValue = 30;
+        progressBar.value = killCount; ;
     }
 
     void Update()
@@ -36,8 +38,7 @@ public class PlayerController : MonoBehaviour
         {
             shootingScript.ShootBullet(spawnPoint);
         }
-
-        progressBar.value = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount;
+        progressBar.value = killCount;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

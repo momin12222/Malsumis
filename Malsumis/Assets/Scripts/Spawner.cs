@@ -15,10 +15,11 @@ public class Spawner : MonoBehaviour
 
     private float cooldown;
     private Vector3 spawnPos;
-    public float killCount;
+    private float killCount;
 
     private void Update()
     {
+        killCount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount;
         if (killCount >= 0 && killCount < range)
         {
             Spawn(prefab1);
