@@ -11,6 +11,8 @@ public class BossController : MonoBehaviour
     public Transform spawnPoint;
     public Transform dashPoint;
     public Transform endPoint;
+    public Transform top;
+    public Transform bottom;
     public GameObject dashCollider;
 
     public float speed;
@@ -33,6 +35,8 @@ public class BossController : MonoBehaviour
         shootingScript = GetComponent<Shoot>();
         dashCooldown = dashRate;
         fireCooldown = fireRate;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().progressBar.maxValue = healthScript.startHP;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount = healthScript.currentHP;
     }
 
     void Update()
@@ -46,8 +50,9 @@ public class BossController : MonoBehaviour
                 dashCollider.gameObject.SetActive(false);
             }
         }
-        else
+        else if (transform.position != endPoint.position)
         {
+           // movementScript.MoveInRange(speed, top, bottom);
             movementScript.MoveToPoint(endPoint, speed);
         }
 
@@ -90,7 +95,8 @@ public class BossController : MonoBehaviour
     {
         if (other.gameObject.tag == "PlayerBullet")
         {
-            healthScript.TakeDemange(2);
+            healthScript.TakeDemange(1);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount = healthScript.currentHP;
             Destroy(other.gameObject);
             //load win screen
         }

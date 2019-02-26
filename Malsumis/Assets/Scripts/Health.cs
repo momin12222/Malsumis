@@ -22,6 +22,10 @@ public class Health : MonoBehaviour
         currentHP -= amount;
         if (currentHP <= 0)
         {
+            if (gameObject.tag == "Enemy")
+            {
+                Destroy(gameObject);
+            }
             //if (gameObject.tag == "Enemy1" || gameObject.tag == "Enemy2" || gameObject.tag == "Enemy3")
             //{
             //    GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().killCount++;
@@ -30,19 +34,16 @@ public class Health : MonoBehaviour
             if (gameObject.tag == "Enemy1")
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount+=0.5f;
-                //GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().enemy1++;
                 Destroy(gameObject);
             }
             else if (gameObject.tag == "Enemy2")
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount+=0.5f;
-                //GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().enemy2++;
                 Destroy(gameObject);
             }
             else if (gameObject.tag == "Enemy3")
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount++;
-                //GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().enemy3++;
                 Destroy(gameObject);
             }
         }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    private float direction = 1;
+
     public void PlayerMovement(float speed)
     {
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -19,6 +21,21 @@ public class Movement : MonoBehaviour
     public void MoveForward(float speed)
     {
         transform.Translate(Time.deltaTime * speed, 0f, 0f);
+    }
+
+    public void MoveInRange(float speed, Transform min, Transform max)
+    {
+        if (gameObject.transform.position.y == max.position.y)
+        {
+            direction = -1;
+            print("Cahnged1");
+        }
+        else if (gameObject.transform.position.y == min.position.y)
+        {
+            direction = 1;
+            print("Cahnged");
+        }
+        transform.Translate(0f, Time.deltaTime * speed * direction, 0f);
     }
 
     public void MoveToPoint(Transform point, float speed)

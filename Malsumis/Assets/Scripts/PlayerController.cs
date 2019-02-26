@@ -12,10 +12,6 @@ public class PlayerController : MonoBehaviour
     public Transform spawnPoint;
     public float speed;
 
-    public int enemyDmg;
-    public int dashDmg;
-    public int fireballDmg;
-
     public Slider progressBar;
     //add killcount on player
     public float killCount;
@@ -45,18 +41,13 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyBullet")
         {
-            healthScript.TakeDamageWithUpdate(enemyDmg);
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.tag == "BossFireball")
-        {
-            healthScript.TakeDamageWithUpdate(dashDmg);
+            healthScript.TakeDamageWithUpdate(1);
             Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "BossDash")
         {
-            healthScript.TakeDamageWithUpdate(fireballDmg);
-            Destroy(other.gameObject);
+            healthScript.TakeDamageWithUpdate(1);
+
         }
     }
 }
