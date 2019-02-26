@@ -17,6 +17,12 @@ public class Spawner : MonoBehaviour
     private Vector3 spawnPos;
     private float killCount;
 
+    private void Start()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().progressBar.maxValue = range * 3;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().progressBar.value = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount;
+    }
+
     private void Update()
     {
         killCount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount;

@@ -52,8 +52,11 @@ public class BossController : MonoBehaviour
         }
         else if (transform.position != endPoint.position)
         {
-           // movementScript.MoveInRange(speed, top, bottom);
             movementScript.MoveToPoint(endPoint, speed);
+        }
+        else
+        {
+            movementScript.MoveInRange(speed, top, bottom);
         }
 
         if (Time.time > dashCooldown)

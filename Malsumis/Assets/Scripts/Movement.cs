@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private float direction = 1;
+    private Transform temp;
 
     public void PlayerMovement(float speed)
     {
@@ -25,17 +26,22 @@ public class Movement : MonoBehaviour
 
     public void MoveInRange(float speed, Transform min, Transform max)
     {
-        if (gameObject.transform.position.y == max.position.y)
+        MoveToPoint(max, speed);
+        if (transform.position == max.position && transform.position != min.position)
         {
-            direction = -1;
-            print("Cahnged1");
+            MoveToPoint(min, speed);
         }
-        else if (gameObject.transform.position.y == min.position.y)
-        {
-            direction = 1;
-            print("Cahnged");
-        }
-        transform.Translate(0f, Time.deltaTime * speed * direction, 0f);
+        //if (gameObject.transform.position.y == max.position.y)
+        //{
+        //    direction = -1;
+        //    print("Cahnged1");
+        //}
+        //else if (gameObject.transform.position.y == min.position.y)
+        //{
+        //    direction = 1;
+        //    print("Cahnged");
+        //}
+        //transform.Translate(0f, Time.deltaTime * speed * direction, 0f);
     }
 
     public void MoveToPoint(Transform point, float speed)

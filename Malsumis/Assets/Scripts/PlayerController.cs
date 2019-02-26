@@ -22,8 +22,6 @@ public class PlayerController : MonoBehaviour
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
         //boudingSctipt = GetComponent<Bounds>();
-        progressBar.maxValue = 30;
-        progressBar.value = killCount; ;
     }
 
     void Update()
