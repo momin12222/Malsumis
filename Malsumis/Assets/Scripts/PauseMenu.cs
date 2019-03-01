@@ -8,7 +8,8 @@ public class PauseMenu : MonoBehaviour {
 
     public string level;
     public GameObject pauseMenu;
-    public Text screenText;
+    public GameObject pauseImg;
+    public GameObject deathImg;
     public Button resume;
 
     private void Update()
@@ -30,7 +31,8 @@ public class PauseMenu : MonoBehaviour {
 
     public void Death()
     {
-        screenText.text = "Death";
+        pauseImg.SetActive(false);
+        deathImg.SetActive(true);
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
         resume.gameObject.SetActive(false);
@@ -38,7 +40,8 @@ public class PauseMenu : MonoBehaviour {
 
     public void Pause()
     {
-        screenText.text = "Pause";
+        pauseImg.SetActive(true);
+        deathImg.SetActive(false);
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
         resume.gameObject.SetActive(true);
