@@ -267,9 +267,9 @@ MonoBehaviour:
   top: {fileID: 581595291}
   bottom: {fileID: 1383683620}
   dashCollider: {fileID: 631536999}
-  speed: 9
-  dashRate: 10
-  fireRate: 7
+  speed: 11
+  dashRate: 7
+  fireRate: 13
   dashIndicator: {fileID: 529677352}
   fireballIndicator: {fileID: 1180620558}
 --- !u!212 &277374339
@@ -2006,6 +2006,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
+    - target: {fileID: 7104442836235188641, guid: 1f114e7ed6794d340b5c3550ac760cc2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 460484409}
+    - target: {fileID: 7104442836235188641, guid: 1f114e7ed6794d340b5c3550ac760cc2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
     - target: {fileID: 7104442834879034139, guid: 1f114e7ed6794d340b5c3550ac760cc2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2120,16 +2130,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Restart
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104442836235188641, guid: 1f114e7ed6794d340b5c3550ac760cc2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 460484409}
-    - target: {fileID: 7104442836235188641, guid: 1f114e7ed6794d340b5c3550ac760cc2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 7104442835342510335, guid: 1f114e7ed6794d340b5c3550ac760cc2,
         type: 3}

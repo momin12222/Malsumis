@@ -1493,7 +1493,7 @@ MonoBehaviour:
   time: 5
   timeMin: 2
   timeMax: 5
-  range: 3
+  range: 5
 --- !u!4 &1472749068
 Transform:
   m_ObjectHideFlags: 0
@@ -2164,6 +2164,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
+    - target: {fileID: 7104442836235188641, guid: 1f114e7ed6794d340b5c3550ac760cc2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 460484409}
     - target: {fileID: 7104442834879034139, guid: 1f114e7ed6794d340b5c3550ac760cc2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2275,11 +2280,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 7104442835941198105, guid: 1f114e7ed6794d340b5c3550ac760cc2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 460484409}
-    - target: {fileID: 7104442836235188641, guid: 1f114e7ed6794d340b5c3550ac760cc2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

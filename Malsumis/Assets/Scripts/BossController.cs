@@ -34,7 +34,7 @@ public class BossController : MonoBehaviour
 
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().progressBar.maxValue = healthScript.startHP;
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount = healthScript.currentHP;
-         
+
         StartCoroutine("Dash");
         StartCoroutine("Fireball");
     }
@@ -72,18 +72,24 @@ public class BossController : MonoBehaviour
 
     IEnumerator Dash()
     {
-        yield return new WaitForSeconds(dashRate);
-        dashing = true;
-        dashPoint.transform.position = new Vector3(dashPoint.position.x, transform.position.y, transform.position.z);
-        dashCollider.gameObject.SetActive(true);
-        dashIndicator.gameObject.SetActive(false);
+        while (true)
+        {
+            yield return new WaitForSeconds(dashRate);
+            dashing = true;
+            dashPoint.transform.position = new Vector3(dashPoint.position.x, transform.position.y, transform.position.z);
+            dashCollider.gameObject.SetActive(true);
+            dashIndicator.gameObject.SetActive(false);
+        }
     }
 
     IEnumerator Fireball()
     {
-        yield return new WaitForSeconds(fireRate);
-        shootingScript.Fireball(spawnPoint);
-        fireballIndicator.gameObject.SetActive(false);
+        while (true)
+        {
+            yield return new WaitForSeconds(fireRate);
+            shootingScript.Fireball(spawnPoint);
+            fireballIndicator.gameObject.SetActive(false);
+        }
     }
 
 }
