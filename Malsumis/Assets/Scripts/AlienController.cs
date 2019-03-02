@@ -42,10 +42,17 @@ public class AlienController : MonoBehaviour
             dashKey = KeyCode.O;
             fireballKey = KeyCode.P;
         }
+
+        //GameObject.FindGameObjectWithTag("Corruption").SetActive(false);
     }
 
     void Update()
     {
+        //if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount >= GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().range / 2) 
+        //{
+        //    GameObject.FindGameObjectWithTag("Corruption").SetActive(true);
+        //}
+
         if (dashing)
         {
             movementScript.MoveToPoint(dashPoint, speed * 4);

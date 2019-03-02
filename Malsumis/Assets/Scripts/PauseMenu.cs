@@ -25,7 +25,6 @@ public class PauseMenu : MonoBehaviour {
         else if (GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().currentHP == 0)
         {
             Death();
-            //GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().currentHP = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().startHP;
         }
     }
 

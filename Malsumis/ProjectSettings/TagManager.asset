@@ -18,8 +18,8 @@ TagManager:
   - Spawner
   - Enemy
   - Slider
-  - PauseScreen
   - UI
+  - Corruption
   layers:
   - Default
   - TransparentFX
