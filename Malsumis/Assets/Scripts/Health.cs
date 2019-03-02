@@ -41,7 +41,7 @@ public class Health : MonoBehaviour
     {
         if (gameObject.tag == "Enemy")
         {
-            Destroy(gameObject);
+            GameObject.FindGameObjectWithTag("UI").GetComponent<PauseMenu>().Death();
         }
         else if (gameObject.tag == "Enemy1" || gameObject.tag == "Enemy2" || gameObject.tag == "Enemy3")
         {

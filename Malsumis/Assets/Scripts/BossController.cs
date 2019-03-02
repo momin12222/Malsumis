@@ -11,6 +11,7 @@ public class BossController : MonoBehaviour
     public Transform spawnPoint;
     public Transform dashPoint;
     public Transform endPoint;
+
     public Transform top;
     public Transform bottom;
     public GameObject dashCollider;
@@ -20,11 +21,8 @@ public class BossController : MonoBehaviour
 
     public float dashRate;
     public float fireRate;
-    private float dashCooldown;
-    private float fireCooldown;
 
     private bool dashing;
-    //private bool fireballActive;
     public Image dashIndicator;
     public Image fireballIndicator;
 
@@ -33,10 +31,12 @@ public class BossController : MonoBehaviour
         movementScript = GetComponent<Movement>();
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
-        dashCooldown = dashRate;
-        fireCooldown = fireRate;
+
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().progressBar.maxValue = healthScript.startHP;
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount = healthScript.currentHP;
+         
+        StartCoroutine("Dash");
+        StartCoroutine("Fireball");
     }
 
     void Update()
@@ -58,40 +58,6 @@ public class BossController : MonoBehaviour
         {
             movementScript.MoveInRange(speed, top, bottom);
         }
-
-        if (Time.time > dashCooldown)
-        {
-            Dash();
-        }
-        if (Time.time > dashCooldown)
-        {
-            dashIndicator.gameObject.SetActive(true);
-        }
-
-        if (Time.time > fireCooldown)
-        {
-            Fireball();
-        }
-        if (Time.time > fireCooldown)
-        {
-            fireballIndicator.gameObject.SetActive(true);
-        }
-    }
-
-    void Dash()
-    {
-        dashing = true;
-        dashPoint.transform.position = new Vector3(dashPoint.position.x, transform.position.y, transform.position.z);
-        dashCollider.gameObject.SetActive(true);
-        dashCooldown = Time.time + dashRate;
-        dashIndicator.gameObject.SetActive(false);
-    }
-
-    void Fireball()
-    {
-        fireCooldown = Time.time + fireRate;
-        fireballIndicator.gameObject.SetActive(false);
-        shootingScript.Fireball(spawnPoint);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -101,8 +67,23 @@ public class BossController : MonoBehaviour
             healthScript.TakeDemange(1);
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount = healthScript.currentHP;
             Destroy(other.gameObject);
-            //load win screen
         }
+    }
+
+    IEnumerator Dash()
+    {
+        yield return new WaitForSeconds(dashRate);
+        dashing = true;
+        dashPoint.transform.position = new Vector3(dashPoint.position.x, transform.position.y, transform.position.z);
+        dashCollider.gameObject.SetActive(true);
+        dashIndicator.gameObject.SetActive(false);
+    }
+
+    IEnumerator Fireball()
+    {
+        yield return new WaitForSeconds(fireRate);
+        shootingScript.Fireball(spawnPoint);
+        fireballIndicator.gameObject.SetActive(false);
     }
 
 }
