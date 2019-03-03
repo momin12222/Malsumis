@@ -26,13 +26,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        movementScript.PlayerMovement(speed);
+        //movementScript.PlayerMovement(speed);
      
         if (Input.GetKey(KeyCode.Space))
         {
             shootingScript.ShootBullet(spawnPoint);
         }
         progressBar.value = killCount;
+    }
+
+    private void LateUpdate()
+    {
+        movementScript.PlayerMovement(speed);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

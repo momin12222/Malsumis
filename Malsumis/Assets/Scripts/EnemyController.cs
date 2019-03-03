@@ -9,7 +9,6 @@ public class EnemyController : MonoBehaviour
     Shoot shootingScript;
     public Transform spawnPoint;
     public float speed;
-    public int playerDmg;
 
     void Start()
     {
@@ -32,7 +31,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.gameObject.tag == "PlayerBullet")
         {
-            healthScript.TakeDemange(playerDmg);
+            healthScript.TakeDemange(1);
             Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Fireball")

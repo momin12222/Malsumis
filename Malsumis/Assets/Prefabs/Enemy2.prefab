@@ -127,7 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 3879906452532790805}
   speed: -7
-  playerDmg: 1
 --- !u!114 &3879906452053614544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0011e447a745a6243b3e188fb558a80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHP: 4
+  startHP: 5
   currentHP: 0
   healthImages: []
 --- !u!114 &3879906452053614127

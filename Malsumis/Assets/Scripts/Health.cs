@@ -7,7 +7,6 @@ public class Health : MonoBehaviour
 {
     public int startHP;
     public int currentHP;
-    //health bar
     public GameObject[] healthImages;
    
     void Start()
