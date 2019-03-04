@@ -66,6 +66,8 @@ public class Health : MonoBehaviour
 
     IEnumerator Blink()
     {
+        //This makes hit sound.
+        SoundManagerScript.PlaySound("Hit");
         gameObject.GetComponent<SpriteRenderer>().material.color = Color.gray;
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<SpriteRenderer>().material.color = Color.white;

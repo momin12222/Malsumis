@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         movementScript = GetComponent<Movement>();
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
@@ -46,13 +47,10 @@ public class PlayerController : MonoBehaviour
         {
             healthScript.TakeDamageWithUpdate(1);
             Destroy(other.gameObject);
-            //This makes hit sound.
-            SoundManagerScript.PlaySound("Hit");
         }
         if (other.gameObject.tag == "BossDash")
         {
             healthScript.TakeDamageWithUpdate(1);
-
         }
     }
 }

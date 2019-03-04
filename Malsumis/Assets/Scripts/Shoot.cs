@@ -13,24 +13,23 @@ public class Shoot : MonoBehaviour
     {
         if (Time.time > fireCooldown)
         {
-            fireCooldown = Time.time + fireRate;
-            Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
             //This makes bullet sounds when shooting.
             SoundManagerScript.PlaySound("Bullet");
+            fireCooldown = Time.time + fireRate;
+            Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
         }
     }
 
     public void Fireball(Transform spawnPoint)
     {
-        //make it happen few times?
         if (Time.time > fireCooldown)
         {
+            //This makes fireball sounds when activated.
+            SoundManagerScript.PlaySound("Fireball");
             fireCooldown = Time.time + fireRate;
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0f, 0f, 15f));
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0f, 0f, -15f));
-            //This makes fireball sounds when activated.
-            SoundManagerScript.PlaySound("Fireball");
         }
     }
 
