@@ -99,6 +99,8 @@ public class AlienController : MonoBehaviour
         dashCooldown = Time.time + dashRate;
         dashIndicator.gameObject.SetActive(false);
         dashing = true;
+        //This makes Dash sound.
+        SoundManagerScript.PlaySound("Dash");
     }
 
     void Fireball()

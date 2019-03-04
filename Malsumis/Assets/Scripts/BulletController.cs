@@ -27,10 +27,14 @@ public class BulletController : MonoBehaviour
         if (other.gameObject.tag == "Enemy" && gameObject.tag == "PlayerBullet")
         {
             Destroy(gameObject);
+            //This makes hit sound.
+            SoundManagerScript.PlaySound("Hit");
         }
         else if (other.gameObject.tag == "Player" && gameObject.tag == "EnemyBullet")
         {
             Destroy(gameObject);
+            //This makes hit sound.
+            SoundManagerScript.PlaySound("Hit");
         }
     }
 }

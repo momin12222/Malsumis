@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
         {
             healthScript.TakeDamageWithUpdate(1);
             Destroy(other.gameObject);
+            //This makes hit sound.
+            SoundManagerScript.PlaySound("Hit");
         }
         if (other.gameObject.tag == "BossDash")
         {

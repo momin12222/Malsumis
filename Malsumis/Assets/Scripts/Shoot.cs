@@ -15,6 +15,8 @@ public class Shoot : MonoBehaviour
         {
             fireCooldown = Time.time + fireRate;
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
+            //This makes bullet sounds when shooting.
+            SoundManagerScript.PlaySound("Bullet");
         }
     }
 
@@ -27,6 +29,8 @@ public class Shoot : MonoBehaviour
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0f, 0f, 15f));
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0f, 0f, -15f));
+            //This makes fireball sounds when activated.
+            SoundManagerScript.PlaySound("Fireball");
         }
     }
 
