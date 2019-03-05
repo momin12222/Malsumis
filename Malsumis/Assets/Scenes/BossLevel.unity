@@ -1135,6 +1135,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838332768}
   m_CullTransparentMesh: 0
+--- !u!1 &880924035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1403746591539191089, guid: 7e5bdc02535785847911e7bf0792073e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6478588071258123478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1088279533
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,6 +2305,11 @@ PrefabInstance:
       propertyPath: dashDmg
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 643650352888299175, guid: 73f84381bfe3e51469a19199f1d9858d,
+        type: 3}
+      propertyPath: corruption
+      value: 
+      objectReference: {fileID: 880924035}
     - target: {fileID: 643650352888299181, guid: 73f84381bfe3e51469a19199f1d9858d,
         type: 3}
       propertyPath: pauseMenu

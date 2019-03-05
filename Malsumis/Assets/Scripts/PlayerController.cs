@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour
     public float speed;
 
     public Slider progressBar;
+    public GameObject corruption;
     public float killCount;
+
 
     void Start()
     {
@@ -31,10 +33,9 @@ public class PlayerController : MonoBehaviour
             shootingScript.ShootBullet(spawnPoint);
         }
         progressBar.value = killCount;
-        if (killCount >= GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().range * 2)
+        if (progressBar.value >= progressBar.maxValue / 3 * 2)
         {
-            //why cant it find it
-            GameObject.FindGameObjectWithTag("Corruption").SetActive(true);
+            corruption.SetActive(true);
         }
     }
 
