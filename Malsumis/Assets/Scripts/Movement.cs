@@ -7,14 +7,17 @@ public class Movement : MonoBehaviour
     private float direction = 1;
     private Transform temp;
 
-    Vector3 newVector;
-    private Transform topLeft;
-    private Transform bottomRight;
+    public Camera MainCamera;
+    private Vector2 screenBounds;
+    private float objectWidth;
+    private float objectHeight;
 
     private void Start()
     {
-        topLeft = GameObject.FindGameObjectWithTag("top").transform;
-        bottomRight = GameObject.FindGameObjectWithTag("bottom").transform;
+        MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        screenBounds = MainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, MainCamera.transform.position.z));
+        objectWidth = transform.GetComponent<SpriteRenderer>().bounds.extents.x; //extents = size of width / 2
+        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y; //extents = size of height / 2
     }
 
     public void PlayerMovement(float speed)
@@ -54,39 +57,11 @@ public class Movement : MonoBehaviour
         //transform.Translate(0f, Time.deltaTime * speed * direction, 0f);
     }
 
-    private void Bound()
+    public void Bound()
     {
-        if (transform.position.x < topLeft.position.x)
-        {
-            newVector = new Vector2(transform.position.x + 1, transform.position.y);
-            if (transform.position != newVector)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, newVector, 1f);
-            }
-        }
-        else if (transform.position.x > bottomRight.position.x)
-        {
-            newVector = new Vector2(transform.position.x + 1, transform.position.y);
-            if (transform.position != newVector)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, newVector, -1f);
-            }
-        }
-        else if (transform.position.y > topLeft.position.y)
-        {
-            newVector = new Vector2(transform.position.x, transform.position.y - 1);
-            if (transform.position != newVector)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, newVector, 1f);
-            }
-        }
-        else if (transform.position.y < bottomRight.position.y)
-        {
-            newVector = new Vector2(transform.position.x, transform.position.y - 1);
-            if (transform.position != newVector)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, newVector, -1f);
-            }
-        }
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, screenBounds.x * -1 + objectWidth, screenBounds.x - objectWidth);
+        pos.y = Mathf.Clamp(pos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight - 4);
+        transform.position = pos;
     }
 }

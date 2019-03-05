@@ -8,12 +8,10 @@ public class PlayerController : MonoBehaviour
     Movement movementScript;
     Health healthScript; 
     Shoot shootingScript;
-    //Bounds boudingSctipt;
     public Transform spawnPoint;
     public float speed;
 
     public Slider progressBar;
-    //add killcount on player
     public float killCount;
 
     void Start()
@@ -22,23 +20,22 @@ public class PlayerController : MonoBehaviour
         movementScript = GetComponent<Movement>();
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
-        //boudingSctipt = GetComponent<Bounds>();
+        progressBar = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
     }
 
     void Update()
     {
-        //movementScript.PlayerMovement(speed);
-     
+        movementScript.PlayerMovement(speed);
         if (Input.GetKey(KeyCode.Space))
         {
             shootingScript.ShootBullet(spawnPoint);
         }
         progressBar.value = killCount;
-    }
-
-    private void LateUpdate()
-    {
-        movementScript.PlayerMovement(speed);
+        if (killCount >= GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().range * 2)
+        {
+            //why cant it find it
+            GameObject.FindGameObjectWithTag("Corruption").SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
