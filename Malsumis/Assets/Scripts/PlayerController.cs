@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public GameObject corruption;
     public float killCount;
 
-
     void Start()
     {
         Time.timeScale = 1f;

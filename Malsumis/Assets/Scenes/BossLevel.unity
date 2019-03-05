@@ -268,9 +268,10 @@ MonoBehaviour:
   top: {fileID: 581595291}
   bottom: {fileID: 1383683620}
   dashCollider: {fileID: 631536999}
-  speed: 21
-  dashRate: 5.5
-  fireRate: 13
+  speed: 5
+  dashSpeed: 21
+  dashRate: 15
+  fireRate: 7
   dashIndicator: {fileID: 529677352}
   fireballIndicator: {fileID: 1180620558}
 --- !u!212 &277374339
@@ -837,7 +838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581595290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 2, z: 0}
+  m_LocalPosition: {x: 17, y: 6.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1495,7 +1496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383683619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: -8, z: 0}
+  m_LocalPosition: {x: 17, y: -5.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2008,7 +2009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &2003385595
 AudioSource:
   m_ObjectHideFlags: 0

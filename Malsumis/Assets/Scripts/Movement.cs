@@ -16,8 +16,8 @@ public class Movement : MonoBehaviour
     {
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         screenBounds = MainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, MainCamera.transform.position.z));
-        objectWidth = transform.GetComponent<SpriteRenderer>().bounds.extents.x; //extents = size of width / 2
-        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y; //extents = size of height / 2
+        objectWidth = transform.GetComponent<SpriteRenderer>().bounds.extents.x; 
+        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y; 
     }
 
     public void PlayerMovement(float speed)
@@ -36,27 +36,7 @@ public class Movement : MonoBehaviour
     {
         transform.Translate(Time.deltaTime * speed, 0f, 0f);
     }
-
-    public void MoveInRange(float speed, Transform min, Transform max)
-    {
-        MoveToPoint(max, speed);
-        if (transform.position == max.position && transform.position != min.position)
-        {
-            MoveToPoint(min, speed);
-        }
-        //if (gameObject.transform.position.y == max.position.y)
-        //{
-        //    direction = -1;
-        //    print("Cahnged1");
-        //}
-        //else if (gameObject.transform.position.y == min.position.y)
-        //{
-        //    direction = 1;
-        //    print("Cahnged");
-        //}
-        //transform.Translate(0f, Time.deltaTime * speed * direction, 0f);
-    }
-
+   
     public void Bound()
     {
         Vector3 pos = transform.position;

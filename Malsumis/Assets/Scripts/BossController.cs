@@ -17,6 +17,7 @@ public class BossController : MonoBehaviour
     public GameObject dashCollider;
 
     public float speed;
+    public float dashSpeed;
     private Transform startPos;
 
     public float dashRate;
@@ -43,20 +44,23 @@ public class BossController : MonoBehaviour
     {
         if (dashing)
         {
-            movementScript.MoveToPoint(dashPoint, speed);
+            movementScript.MoveToPoint(dashPoint, dashSpeed);
             if (transform.position == dashPoint.position)
             {
                 dashing = false;
                 dashCollider.gameObject.SetActive(false);
             }
-        }
-        else if (transform.position != endPoint.position)
-        {
-            movementScript.MoveToPoint(endPoint, speed);
+            //movementScript.MoveToPoint(endPoint, dashSpeed);
         }
         else
         {
-            movementScript.MoveInRange(speed, top, bottom);
+            transform.position = Vector3.MoveTowards(transform.position, bottom.position, speed * Time.deltaTime);
+            if (transform.position == bottom.position)
+            {
+                Vector3 temp = bottom.position;
+                bottom.position = top.position;
+                top.position = temp;
+            }
         }
     }
 
