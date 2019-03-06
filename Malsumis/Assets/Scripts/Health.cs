@@ -42,26 +42,26 @@ public class Health : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("UI").GetComponent<PauseMenu>().Death();
         }
-        else if (gameObject.tag == "Enemy1" || gameObject.tag == "Enemy2" || gameObject.tag == "Enemy3")
-        {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount++;
-            Destroy(gameObject);
-        }
-        //else if (gameObject.tag == "Enemy1")
-        //{
-        //    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount += 0.5f;
-        //    Destroy(gameObject);
-        //}
-        //else if (gameObject.tag == "Enemy2")
-        //{
-        //    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount += 0.5f;
-        //    Destroy(gameObject);
-        //}
-        //else if (gameObject.tag == "Enemy3")
+        //else if (gameObject.tag == "Enemy1" || gameObject.tag == "Enemy2" || gameObject.tag == "Enemy3")
         //{
         //    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount++;
         //    Destroy(gameObject);
         //}
+        else if (gameObject.tag == "Enemy1")
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount++;
+            Destroy(gameObject);
+        }
+        else if (gameObject.tag == "Enemy2")
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount += 2f;
+            Destroy(gameObject);
+        }
+        else if (gameObject.tag == "Enemy3")
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount += 3f;
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator Blink()
