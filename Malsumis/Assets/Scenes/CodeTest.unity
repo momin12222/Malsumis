@@ -1891,7 +1891,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 319708288}
   dashPoint: {fileID: 1546539790}
   dashCollider: {fileID: 806965598}
-  speed: 6
+  speed: 15
   dashRate: 10
   fireRate: 7
   dashActive: 0
