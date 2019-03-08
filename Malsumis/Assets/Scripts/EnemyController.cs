@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
         shootingScript.ShootBullet(spawnPoint);
         if (transform.position.x < -20)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount--;
             Destroy(gameObject);
         }
     }
