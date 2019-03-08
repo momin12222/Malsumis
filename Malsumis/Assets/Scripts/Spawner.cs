@@ -49,7 +49,7 @@ public class Spawner : MonoBehaviour
     public void Spawn(GameObject prefab)
     {
         spawnPos.x = transform.position.x;
-        spawnPos.y = Random.Range(-7, 5);
+        spawnPos.y = Random.Range(-6, 5);
         spawnPos.z = transform.position.z;
 
         if (Time.time > cooldown)
