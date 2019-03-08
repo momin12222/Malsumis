@@ -50,7 +50,6 @@ public class BossController : MonoBehaviour
                 dashing = false;
                 dashCollider.gameObject.SetActive(false);
             }
-            //movementScript.MoveToPoint(endPoint, dashSpeed);
         }
         else
         {
