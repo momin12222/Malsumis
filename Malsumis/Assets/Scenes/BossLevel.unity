@@ -268,8 +268,8 @@ MonoBehaviour:
   top: {fileID: 581595291}
   bottom: {fileID: 1383683620}
   dashCollider: {fileID: 631536999}
-  speed: 6
-  dashSpeed: 30
+  speed: 7
+  dashSpeed: 35
   dashRate: 15
   fireRate: 7
   dashIndicator: {fileID: 529677352}
