@@ -250,6 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8448189885835244326}
   - component: {fileID: 1867071622935888829}
+  - component: {fileID: 1952710113467236720}
   m_Layer: 0
   m_Name: Head
   m_TagString: Headshot
@@ -287,3 +288,15 @@ CircleCollider2D:
   m_Offset: {x: 0.5250677, y: 2.3135805}
   serializedVersion: 2
   m_Radius: 0.5164094
+--- !u!114 &1952710113467236720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597813177486907179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4ef67362fde55438e5a9cbb9d9256a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
