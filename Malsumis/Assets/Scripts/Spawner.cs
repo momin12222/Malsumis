@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour
             Spawn(prefab3);
             GameObject.FindGameObjectWithTag("Alien").GetComponent<AlienController>().fireballActive = true;
         }
-        if (killCount == range * 3)
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().progressBar.value == GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().progressBar.maxValue)
         {
             SceneManager.LoadScene("BossLevel");
         }
