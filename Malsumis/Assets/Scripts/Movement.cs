@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
     public void Bound()
     {
         Vector3 pos = transform.position;
-        pos.x = Mathf.Clamp(pos.x, screenBounds.x * -1 + objectWidth, screenBounds.x - objectWidth);
+        pos.x = Mathf.Clamp(pos.x, screenBounds.x * -1 + objectWidth, screenBounds.x - objectWidth - 10);
         pos.y = Mathf.Clamp(pos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight - 4);
         transform.position = pos;
     }
