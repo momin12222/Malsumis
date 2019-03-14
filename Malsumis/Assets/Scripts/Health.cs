@@ -65,11 +65,8 @@ public class Health : MonoBehaviour
 
     IEnumerator BlinkRed(GameObject sprite)
     {
-        for (int i = 0; i < 1; i++)
-        {
-            sprite.GetComponent<SpriteRenderer>().material.color = Color.red;
-            yield return new WaitForSeconds(0.1f);
-            sprite.GetComponent<SpriteRenderer>().material.color = Color.white;
-        }
+        sprite.GetComponent<Image>().color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        sprite.GetComponent<Image>().color = Color.white;
     }
 }
