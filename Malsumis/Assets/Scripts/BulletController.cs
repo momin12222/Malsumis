@@ -15,7 +15,7 @@ public class BulletController : MonoBehaviour
 
     void Update()
     {
-        movementScript.MoveForward(speed);
+        movementScript.MoveForward(speed, 0, false);
         if (transform.position.x > 20 || transform.position.x < -20)
         {
             Destroy(gameObject);

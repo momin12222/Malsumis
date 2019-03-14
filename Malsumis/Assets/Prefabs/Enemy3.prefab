@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 3879906452532790805}
   speed: -9
+  amplitude: 0.05
 --- !u!114 &3879906452053614544
 MonoBehaviour:
   m_ObjectHideFlags: 0

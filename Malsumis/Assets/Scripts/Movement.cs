@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private float direction = 1;
-    private Transform temp;
-
     public Camera MainCamera;
     private Vector2 screenBounds;
     private float objectWidth;
     private float objectHeight;
+
+    float t = 0f;
 
     private void Start()
     {
@@ -32,9 +31,11 @@ public class Movement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, point.position, speed * Time.deltaTime);
     }
 
-    public void MoveForward(float speed)
+    public void MoveForward(float speed, float amplitude, bool bound)
     {
-        transform.Translate(Time.deltaTime * speed, 0f, 0f);
+        transform.Translate(Time.deltaTime * speed, amplitude * Mathf.Cos(t), 0f);
+        t += Time.deltaTime;
+        BoundY(bound);
     }
    
     public void Bound()
@@ -43,5 +44,15 @@ public class Movement : MonoBehaviour
         pos.x = Mathf.Clamp(pos.x, screenBounds.x * -1 + objectWidth, screenBounds.x - objectWidth - 10);
         pos.y = Mathf.Clamp(pos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight - 4);
         transform.position = pos;
+    }
+
+    public void BoundY(bool bound)
+    {
+        if (bound)
+        {
+            Vector3 pos = transform.position;
+            pos.y = Mathf.Clamp(pos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight - 4);
+            transform.position = pos;
+        }
     }
 }

@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     Shoot shootingScript;
     public Transform spawnPoint;
     public float speed;
+    public float amplitude;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        movementScript.MoveForward(speed);
+        movementScript.MoveForward(speed, amplitude, true);
         shootingScript.ShootBullet(spawnPoint);
         if (transform.position.x < -20)
         {
