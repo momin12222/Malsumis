@@ -9,6 +9,9 @@ public class Spawner : MonoBehaviour
     public GameObject prefab2;
     public GameObject prefab3;
 
+    public GameObject corruption1;
+    public GameObject corruption2;
+
     private PlayerController player;
     private AlienController alien;
 
@@ -40,22 +43,32 @@ public class Spawner : MonoBehaviour
         if (killCount >= 0 && killCount < range)
         {
             Spawn(prefab1);
+            alien.dashActive = false;
+            alien.fireballActive = false;
             alien.GetComponent<Animator>().SetBool("dash", false);
             alien.GetComponent<Animator>().SetBool("fireball", false);
+            corruption1.SetActive(false);
+            corruption2.SetActive(false);
         }
         if (killCount >= range && killCount < range * 2)
         {  
             Spawn(prefab2);
             alien.dashActive = true;
+            alien.fireballActive = false;
             alien.GetComponent<Animator>().SetBool("dash", true);
             alien.GetComponent<Animator>().SetBool("fireball", false);
+            corruption1.SetActive(true);
+            corruption2.SetActive(false);
         }
         if (killCount >= range * 2 && killCount < range * 3)
         {
             Spawn(prefab3);
+            alien.dashActive = true;
             alien.fireballActive = true;
             alien.GetComponent<Animator>().SetBool("dash", true);
             alien.GetComponent<Animator>().SetBool("fireball", true);
+            corruption1.SetActive(false);
+            corruption2.SetActive(true);
         }
         if (player.progressBar.value == player.progressBar.maxValue)
         {

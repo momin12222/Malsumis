@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
 
     public Slider progressBar;
-    public GameObject corruption;
     public float killCount;
 
     void Start()
@@ -32,10 +31,6 @@ public class PlayerController : MonoBehaviour
             shootingScript.ShootBullet(spawnPoint);
         }
         progressBar.value = killCount;
-        if (progressBar.value >= progressBar.maxValue / 3 * 2)
-        {
-            corruption.SetActive(true);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
