@@ -74,6 +74,10 @@ public class AlienController : MonoBehaviour
                 dashIndicator.gameObject.SetActive(true);
             }
         }
+        else
+        {
+            dashIndicator.gameObject.SetActive(false);
+        }
 
         if (fireballActive)
         {
@@ -85,6 +89,10 @@ public class AlienController : MonoBehaviour
             {
                 fireballIndicator.gameObject.SetActive(true);
             }
+        }
+        else
+        {
+            fireballIndicator.gameObject.SetActive(false);
         }
     }
 

@@ -34,6 +34,10 @@ public class Health : MonoBehaviour
     void updateHearts()
     {
         healthImages[currentHP].SetActive(false);
+        for (int i = 0; i < 6; i++)
+        {
+            StartCoroutine(BlinkRed(healthImages[i]));
+        }
     }
 
     void DeathConditions()
@@ -57,5 +61,15 @@ public class Health : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().material.color = Color.gray;
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<SpriteRenderer>().material.color = Color.white;
+    }
+
+    IEnumerator BlinkRed(GameObject sprite)
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            sprite.GetComponent<SpriteRenderer>().material.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            sprite.GetComponent<SpriteRenderer>().material.color = Color.white;
+        }
     }
 }
