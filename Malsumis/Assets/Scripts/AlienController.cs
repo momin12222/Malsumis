@@ -47,8 +47,7 @@ public class AlienController : MonoBehaviour
 
     void Update()
     {
-        GetComponent<Animator>().SetBool("dash", dashActive);
-        GetComponent<Animator>().SetBool("fireball", fireballActive);
+        
 
         if (dashing)
         {
