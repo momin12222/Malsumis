@@ -241,7 +241,7 @@ PrefabInstance:
     - target: {fileID: 1287156570332382471, guid: a60d7d0123ca0cb4d852fddf4751792f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1287156570332382471, guid: a60d7d0123ca0cb4d852fddf4751792f,
         type: 3}
@@ -1462,6 +1462,16 @@ PrefabInstance:
       propertyPath: corruption
       value: 
       objectReference: {fileID: 1585516764}
+    - target: {fileID: 643650352888299179, guid: 73f84381bfe3e51469a19199f1d9858d,
+        type: 3}
+      propertyPath: count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 643650352888299179, guid: 73f84381bfe3e51469a19199f1d9858d,
+        type: 3}
+      propertyPath: bulletNumber
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 643650352888299181, guid: 73f84381bfe3e51469a19199f1d9858d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73f84381bfe3e51469a19199f1d9858d, type: 3}
@@ -1913,6 +1923,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3499993211057513683, guid: 0e992c2b77b5a99409368001826fc8e1, type: 3}
   fireRate: 0.5
+  bulletNumber: 0
+  bulletDelay: 0
 --- !u!95 &1498796404
 Animator:
   serializedVersion: 3
@@ -2223,7 +2235,7 @@ PrefabInstance:
     - target: {fileID: 756206810445896074, guid: 7e5bdc02535785847911e7bf0792073e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 756206810445896074, guid: 7e5bdc02535785847911e7bf0792073e,
         type: 3}
@@ -2289,6 +2301,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608238767033849554, guid: 7e5bdc02535785847911e7bf0792073e,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.5254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089095899234558654, guid: 7e5bdc02535785847911e7bf0792073e,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.5254902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e5bdc02535785847911e7bf0792073e, type: 3}
@@ -2409,10 +2431,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 460484408}
     m_Modifications:
+    - target: {fileID: 2340863829464952582, guid: 1f114e7ed6794d340b5c3550ac760cc2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2340863829464952583, guid: 1f114e7ed6794d340b5c3550ac760cc2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2340863829464952583, guid: 1f114e7ed6794d340b5c3550ac760cc2,
         type: 3}

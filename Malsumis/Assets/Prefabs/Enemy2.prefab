@@ -170,6 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3499993211057513683, guid: f6e750ed5076f714293e946c86c93b6b, type: 3}
   fireRate: 1.5
+  bulletNumber: 2
+  bulletDelay: 0.1
 --- !u!50 &3879906452053614126
 Rigidbody2D:
   serializedVersion: 4
@@ -300,3 +302,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4ef67362fde55438e5a9cbb9d9256a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 4

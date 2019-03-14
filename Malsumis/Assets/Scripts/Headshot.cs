@@ -5,6 +5,7 @@ using UnityEngine;
 public class Headshot : MonoBehaviour
 {
     Health healthScript;
+    public int damage;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class Headshot : MonoBehaviour
     {
         if (other.gameObject.tag == "PlayerBullet")
         {
-            healthScript.TakeDemange(healthScript.currentHP);
+            healthScript.TakeDemange(damage);
             Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Fireball")

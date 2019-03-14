@@ -48,4 +48,6 @@ public class EnemyController : MonoBehaviour
             healthScript.TakeDemange(healthScript.currentHP);
         }
     }
+
+    
 }
