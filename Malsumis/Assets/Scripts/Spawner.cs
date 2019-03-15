@@ -12,6 +12,12 @@ public class Spawner : MonoBehaviour
     public GameObject corruption1;
     public GameObject corruption2;
 
+    public GameObject evolution1;
+    public GameObject evolution2;
+
+    private bool evolve1;
+    private bool evolve2;
+
     private PlayerController player;
     private AlienController alien;
 
@@ -35,6 +41,9 @@ public class Spawner : MonoBehaviour
         progressValue = player.killCount;
 
         player.progressBar.maxValue = range * 3;
+
+        evolve1 = true;
+        evolve2 = true;
     }
 
     private void Update()
@@ -42,33 +51,26 @@ public class Spawner : MonoBehaviour
         killCount = player.killCount;
         if (killCount >= 0 && killCount < range)
         {
-            Spawn(prefab1);
-            alien.dashActive = false;
-            alien.fireballActive = false;
-            alien.GetComponent<Animator>().SetBool("dash", false);
-            alien.GetComponent<Animator>().SetBool("fireball", false);
-            corruption1.SetActive(false);
-            corruption2.SetActive(false);
+            Activate(prefab1, false, false);
         }
         if (killCount >= range && killCount < range * 2)
-        {  
-            Spawn(prefab2);
-            alien.dashActive = true;
-            alien.fireballActive = false;
-            alien.GetComponent<Animator>().SetBool("dash", true);
-            alien.GetComponent<Animator>().SetBool("fireball", false);
-            corruption1.SetActive(true);
-            corruption2.SetActive(false);
+        {
+            Activate(prefab2, true, false);
+            if (evolve1)
+            {
+                evolution1.SetActive(true);
+                Time.timeScale = 0f;
+                evolve1 = false;
+            }
         }
         if (killCount >= range * 2 && killCount < range * 3)
         {
-            Spawn(prefab3);
-            alien.dashActive = true;
-            alien.fireballActive = true;
-            alien.GetComponent<Animator>().SetBool("dash", true);
-            alien.GetComponent<Animator>().SetBool("fireball", true);
-            corruption1.SetActive(false);
-            corruption2.SetActive(true);
+            Activate(prefab3, true, true);
+            if (evolve2)
+            {
+                evolution2.SetActive(true);
+                evolve2 = false;
+            }
         }
         if (player.progressBar.value == player.progressBar.maxValue)
         {
@@ -90,10 +92,27 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    void Activate(GameObject prefab, bool dash, bool fireball)
+    {
+        Spawn(prefab);
+        alien.dashActive = dash;
+        alien.fireballActive = fireball;
+        alien.GetComponent<Animator>().SetBool("dash", dash);
+        alien.GetComponent<Animator>().SetBool("fireball", fireball);
+        corruption1.SetActive(dash);
+        corruption2.SetActive(fireball);
+    }
+
     IEnumerator LoadBoss()
     {
         print("here");
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("BossLevel");
+    }
+
+    public void Resume(GameObject obj)
+    {
+        Time.timeScale = 1f;
+        obj.SetActive(false);
     }
 }
