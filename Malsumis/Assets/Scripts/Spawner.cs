@@ -59,17 +59,32 @@ public class Spawner : MonoBehaviour
         if (killCount >= range && killCount < range * 2)
         {
             Activate(prefab2, true, false);
-            Evolve(evolution1, evolve1);
+            if (evolve1)
+            {
+                evolution1.SetActive(true);
+                Time.timeScale = 0f;
+                evolve1 = false;
+            }
         }
         if (killCount >= range * 2 && killCount < range * 3)
         {
             Activate(prefab3, true, true);
-            Evolve(evolution2, evolve2);
+            if (evolve2)
+            {
+                evolution2.SetActive(true);
+                Time.timeScale = 0f;
+                evolve2 = false;
+            }
         }
         if (player.progressBar.value == player.progressBar.maxValue)
         {
-            //Evolve(evolution3, evolve3);
-            SceneManager.LoadScene("BossLevel");
+            if (evolve3)
+            {
+                evolution3.SetActive(true);
+                Time.timeScale = 0f;
+                evolve3 = false;
+                StartCoroutine(LoadBoss());
+            }
         }
     }
 
@@ -78,7 +93,6 @@ public class Spawner : MonoBehaviour
         spawnPos.x = transform.position.x;
         spawnPos.y = Random.Range(-6, 5);
         spawnPos.z = transform.position.z;
-
         if (Time.time > cooldown)
         {
             time = Random.Range(timeMin, timeMax);
@@ -110,15 +124,8 @@ public class Spawner : MonoBehaviour
 
     IEnumerator LoadBoss()
     {
-        print("here");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("BossLevel");
     }
 
-    public void Resume(GameObject obj)
-    {
-        print("load");
-        Time.timeScale = 1f;
-        obj.SetActive(false);
-    }
 }
