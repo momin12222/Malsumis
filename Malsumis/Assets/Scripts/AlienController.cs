@@ -47,8 +47,6 @@ public class AlienController : MonoBehaviour
 
     void Update()
     {
-        
-
         if (dashing)
         {
             movementScript.MoveToPoint(dashPoint, speed * 4);

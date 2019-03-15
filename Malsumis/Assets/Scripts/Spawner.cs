@@ -14,9 +14,11 @@ public class Spawner : MonoBehaviour
 
     public GameObject evolution1;
     public GameObject evolution2;
+    public GameObject evolution3;
 
     private bool evolve1;
     private bool evolve2;
+    private bool evolve3;
 
     private PlayerController player;
     private AlienController alien;
@@ -44,6 +46,7 @@ public class Spawner : MonoBehaviour
 
         evolve1 = true;
         evolve2 = true;
+        evolve3 = true;
     }
 
     private void Update()
@@ -56,24 +59,16 @@ public class Spawner : MonoBehaviour
         if (killCount >= range && killCount < range * 2)
         {
             Activate(prefab2, true, false);
-            if (evolve1)
-            {
-                evolution1.SetActive(true);
-                Time.timeScale = 0f;
-                evolve1 = false;
-            }
+            Evolve(evolution1, evolve1);
         }
         if (killCount >= range * 2 && killCount < range * 3)
         {
             Activate(prefab3, true, true);
-            if (evolve2)
-            {
-                evolution2.SetActive(true);
-                evolve2 = false;
-            }
+            Evolve(evolution2, evolve2);
         }
         if (player.progressBar.value == player.progressBar.maxValue)
         {
+            //Evolve(evolution3, evolve3);
             SceneManager.LoadScene("BossLevel");
         }
     }
@@ -103,6 +98,16 @@ public class Spawner : MonoBehaviour
         corruption2.SetActive(fireball);
     }
 
+    void Evolve(GameObject evolution, bool evolve)
+    {
+        if (evolve)
+        {
+            evolution.SetActive(true);
+            Time.timeScale = 0f;
+            evolve = false;
+        }
+    }
+
     IEnumerator LoadBoss()
     {
         print("here");
@@ -112,6 +117,7 @@ public class Spawner : MonoBehaviour
 
     public void Resume(GameObject obj)
     {
+        print("load");
         Time.timeScale = 1f;
         obj.SetActive(false);
     }
