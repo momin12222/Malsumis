@@ -12,8 +12,6 @@ public class BossController : MonoBehaviour
     public Transform dashPoint;
     public Transform endPoint;
 
-    public Transform top;
-    public Transform bottom;
     public GameObject dashCollider;
 
     public float speed;
@@ -53,13 +51,7 @@ public class BossController : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, bottom.position, speed * Time.deltaTime);
-            if (transform.position == bottom.position)
-            {
-                Vector3 temp = bottom.position;
-                bottom.position = top.position;
-                top.position = temp;
-            }
+            movementScript.MoveToPoint(endPoint, dashSpeed);
         }
     }
 

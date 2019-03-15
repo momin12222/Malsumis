@@ -37,7 +37,13 @@ public class Movement : MonoBehaviour
         t += Time.deltaTime;
         BoundY(bound);
     }
-   
+
+    public void MoveY(float amplitude)
+    {
+        transform.Translate(0f, amplitude * Mathf.Cos(t), 0f);
+        t += Time.deltaTime;
+    }
+
     public void Bound()
     {
         Vector3 pos = transform.position;
