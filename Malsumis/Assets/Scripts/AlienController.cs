@@ -70,7 +70,6 @@ public class AlienController : MonoBehaviour
             if (Time.time > dashCooldown)
             {
                 dashIndicator.gameObject.SetActive(true);
-                StartCoroutine(BlinkRed(dashIndicator));
             }
         }
         else
@@ -87,7 +86,6 @@ public class AlienController : MonoBehaviour
             if (Time.time > fireCooldown)
             {
                 fireballIndicator.gameObject.SetActive(true);
-                StartCoroutine(BlinkRed(fireballIndicator));
             }
         }
         else
@@ -112,15 +110,5 @@ public class AlienController : MonoBehaviour
         fireCooldown = Time.time + fireRate;
         fireballIndicator.gameObject.SetActive(false);
         shootingScript.Fireball(spawnPoint);
-    }
-
-    IEnumerator BlinkRed(Image sprite)
-    {
-        for (int i = 0; i < 2; i++)
-        {
-            sprite.color = Color.red;
-            yield return new WaitForSeconds(0.2f);
-            sprite.color = Color.white;
-        }
     }
 }
