@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 277374336}
   - component: {fileID: 277374335}
   - component: {fileID: 277374342}
+  - component: {fileID: 277374343}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -311,9 +312,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300002, guid: f00322bea59711846862a1eaa07fed45, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ff2b8379a56eef419e64aa5a5dc48f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.74, y: 2.76}
@@ -335,9 +336,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.7672412, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2.3640277
 --- !u!4 &277374341
 Transform:
   m_ObjectHideFlags: 0
@@ -346,8 +347,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277374334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 16.54, y: 0.07, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 1687562503}
   - {fileID: 631537001}
@@ -375,6 +376,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &277374343
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277374334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d523688d5a8e1740b97cd28a6f3de15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &325792508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,9 +1024,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -2.2587478, y: -0.9905113}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.2495388
 --- !u!4 &631537001
 Transform:
   m_ObjectHideFlags: 0
@@ -1947,7 +1967,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1959,7 +1979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687562502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.09, y: -0.07, z: 0}
+  m_LocalPosition: {x: -4.32, y: -0.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 277374341}
@@ -1977,7 +1997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7924dbd110431459fa54921e21e3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.08
+  amplitude: 0.05
 --- !u!114 &1687562505
 MonoBehaviour:
   m_ObjectHideFlags: 0
