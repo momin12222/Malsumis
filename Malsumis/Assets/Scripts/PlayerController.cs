@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     Movement movementScript;
     Health healthScript; 
     Shoot shootingScript;
+    private Animator animator;
+
     public Transform spawnPoint;
     public float speed;
+    private bool canIdle;
 
     public Slider progressBar;
     public float killCount;
@@ -20,7 +24,11 @@ public class PlayerController : MonoBehaviour
         movementScript = GetComponent<Movement>();
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
+        animator = GetComponent<Animator>();
+
         progressBar = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
+
+        canIdle = SceneManager.GetActiveScene().name == "BossLevel";
     }
 
     void Update()
@@ -30,6 +38,7 @@ public class PlayerController : MonoBehaviour
         {
             shootingScript.ShootBullet(spawnPoint);
         }
+
         progressBar.value = killCount;
     }
 

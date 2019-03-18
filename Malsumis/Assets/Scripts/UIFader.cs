@@ -14,7 +14,8 @@ public class UIFader : MonoBehaviour{
         if (fadeIn)
         {
             FadeIn();
-        } else
+        }
+        else
         {
             FadeOut();
         }

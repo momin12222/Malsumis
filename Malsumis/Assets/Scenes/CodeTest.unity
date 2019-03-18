@@ -2396,7 +2396,7 @@ PrefabInstance:
     - target: {fileID: 643650352888299175, guid: 73f84381bfe3e51469a19199f1d9858d,
         type: 3}
       propertyPath: killCount
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 643650352888299179, guid: 73f84381bfe3e51469a19199f1d9858d,
         type: 3}
