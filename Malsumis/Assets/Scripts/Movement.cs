@@ -38,9 +38,9 @@ public class Movement : MonoBehaviour
         BoundY(bound);
     }
 
-    public void MoveY(float amplitude)
+    public void MoveY(float amplitude, float multiplier)
     {
-        transform.Translate(0f, amplitude * Mathf.Cos(t), 0f);
+        transform.Translate(0f, amplitude * Mathf.Cos(t * multiplier), 0f);
         t += Time.deltaTime;
     }
 

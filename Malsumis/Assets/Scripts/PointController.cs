@@ -7,6 +7,7 @@ public class PointController : MonoBehaviour
     Movement movementScript;
 
     public float amplitude;
+    public float multiplier;
     
     void Start()
     {
@@ -15,6 +16,6 @@ public class PointController : MonoBehaviour
 
     void Update()
     {
-        movementScript.MoveY(amplitude);
+        movementScript.MoveY(amplitude, multiplier);
     }
 }

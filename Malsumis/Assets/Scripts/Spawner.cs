@@ -9,9 +9,6 @@ public class Spawner : MonoBehaviour
     public GameObject prefab2;
     public GameObject prefab3;
 
-    public GameObject corruption1;
-    public GameObject corruption2;
-
     public GameObject evolution1;
     public GameObject evolution2;
     public GameObject evolution3;
@@ -34,15 +31,17 @@ public class Spawner : MonoBehaviour
     private float killCount;
     private float progressValue;
 
+    public float timeToBoss;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         alien = GameObject.FindGameObjectWithTag("Alien").GetComponent<AlienController>();
 
+        player.progressBar.maxValue = range * 3;
+
         killCount = player.killCount;
         progressValue = player.killCount;
-
-        player.progressBar.maxValue = range * 3;
 
         evolve1 = true;
         evolve2 = true;
@@ -61,8 +60,8 @@ public class Spawner : MonoBehaviour
             Activate(prefab2, true, false);
             if (evolve1)
             {
-                evolution1.SetActive(true);
-                Time.timeScale = 0f;
+                //evolution1.SetActive(true);
+                //Time.timeScale = 0f;
                 evolve1 = false;
             }
         }
@@ -71,8 +70,8 @@ public class Spawner : MonoBehaviour
             Activate(prefab3, true, true);
             if (evolve2)
             {
-                evolution2.SetActive(true);
-                Time.timeScale = 0f;
+                //evolution2.SetActive(true);
+                //Time.timeScale = 0f;
                 evolve2 = false;
             }
         }
@@ -81,7 +80,7 @@ public class Spawner : MonoBehaviour
             if (evolve3)
             {
                 evolution3.SetActive(true);
-                Time.timeScale = 0f;
+                //Time.timeScale = 0f;
                 evolve3 = false;
                 StartCoroutine(LoadBoss());
             }
@@ -108,23 +107,11 @@ public class Spawner : MonoBehaviour
         alien.fireballActive = fireball;
         alien.GetComponent<Animator>().SetBool("dash", dash);
         alien.GetComponent<Animator>().SetBool("fireball", fireball);
-        corruption1.SetActive(dash);
-        corruption2.SetActive(fireball);
-    }
-
-    void Evolve(GameObject evolution, bool evolve)
-    {
-        if (evolve)
-        {
-            evolution.SetActive(true);
-            Time.timeScale = 0f;
-            evolve = false;
-        }
     }
 
     IEnumerator LoadBoss()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(timeToBoss);
         SceneManager.LoadScene("BossLevel");
     }
 

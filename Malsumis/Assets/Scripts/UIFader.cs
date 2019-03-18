@@ -4,39 +4,50 @@ using UnityEngine;
 
 public class UIFader : MonoBehaviour{
 
-    public CanvasGroup uiElement;
+    private CanvasGroup Image;
+    public float fadeTime;
+    public bool fadeIn;
+
+    private void Start()
+    {
+        Image = gameObject.GetComponent<CanvasGroup>();
+        if (fadeIn)
+        {
+            FadeIn();
+        } else
+        {
+            FadeOut();
+        }
+    }
 
     public void FadeIn()
     {
-        StartCoroutine(FadeCanvasGroup(uiElement, uiElement.alpha, 1));
+        StartCoroutine(Fade(Image, Image.alpha, 1, fadeTime));
     }
 
     public void FadeOut()
     {
-        StartCoroutine(FadeCanvasGroup(uiElement, uiElement.alpha, 0));
+        StartCoroutine(Fade(Image, Image.alpha, 0, fadeTime));
     }
 
-    public IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime = 0.5f)
+    public IEnumerator Fade(CanvasGroup cg, float start, float end, float lerpTime)
     {
-        float _timeStartedLerping = Time.time;
-        float timeSinceStared = Time.time - _timeStartedLerping;
-        float percentageComplete = timeSinceStared / lerpTime;
-
+        float startTime = Time.time;
+        float timeSinceStared = Time.time - startTime;
+        float precentage = timeSinceStared / lerpTime;
 
         while(true)
         {
-            timeSinceStared = Time.time - _timeStartedLerping;
-            percentageComplete = timeSinceStared / lerpTime;
+            timeSinceStared = Time.time - startTime;
+            precentage = timeSinceStared / lerpTime;
 
-            float currentValue = Mathf.Lerp(start, end, percentageComplete);
+            float currentValue = Mathf.Lerp(start, end, precentage);
 
             cg.alpha = currentValue;
 
-            if (percentageComplete >= 1) break;
+            if (precentage >= 1) break;
 
             yield return new WaitForEndOfFrame();
         }
-
-        print("done");
     }
 }

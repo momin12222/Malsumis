@@ -42,7 +42,6 @@ public class AlienController : MonoBehaviour
             dashKey = KeyCode.O;
             fireballKey = KeyCode.P;
         }
-        
     }
 
     void Update()
