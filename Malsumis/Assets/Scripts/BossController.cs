@@ -8,6 +8,9 @@ public class BossController : MonoBehaviour
     Movement movementScript;
     Health healthScript;
     Shoot shootingScript;
+    private Animator animator;
+    private AnimatorClipInfo[] animatorClipInfo;
+
     public Transform spawnPoint;
     public Transform dashPoint;
     public Transform endPoint;
@@ -30,12 +33,15 @@ public class BossController : MonoBehaviour
         movementScript = GetComponent<Movement>();
         healthScript = GetComponent<Health>();
         shootingScript = GetComponent<Shoot>();
+        animator = GetComponent<Animator>();
+        animatorClipInfo = animator.GetCurrentAnimatorClipInfo(0);
 
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().progressBar.maxValue = healthScript.startHP;
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().killCount = healthScript.currentHP;
 
         StartCoroutine("Dash");
         StartCoroutine("Fireball");
+        StartCoroutine(CheckPoint(spawnPoint));
     }
 
     void Update()
@@ -84,6 +90,21 @@ public class BossController : MonoBehaviour
             yield return new WaitForSeconds(fireRate);
             shootingScript.Fireball(spawnPoint);
             fireballIndicator.gameObject.SetActive(false);
+        }
+    }
+
+    IEnumerator CheckPoint(Transform point)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(animatorClipInfo.Length);
+            point.transform.position = new Vector2(0f, 0f);
+            yield return new WaitForSeconds(animatorClipInfo.Length);
+            print("2");
+            yield return new WaitForSeconds(animatorClipInfo.Length);
+            print("3");
+            yield return new WaitForSeconds(animatorClipInfo.Length);
+            print("4");
         }
     }
 
