@@ -97,14 +97,14 @@ public class BossController : MonoBehaviour
     {
         while (true)
         {
+            point.transform.localPosition = new Vector2(-4.6f, -2.4f);
             yield return new WaitForSeconds(animatorClipInfo.Length);
-            point.transform.position = new Vector2(0f, 0f);
+            point.transform.localPosition = new Vector2(-5.17f, -1.13f);
             yield return new WaitForSeconds(animatorClipInfo.Length);
-            print("2");
+            point.transform.localPosition = new Vector2(-5.51f, 0.08f);
             yield return new WaitForSeconds(animatorClipInfo.Length);
-            print("3");
+            point.transform.localPosition = new Vector2(-4.63f, -0.72f);
             yield return new WaitForSeconds(animatorClipInfo.Length);
-            print("4");
         }
     }
 
