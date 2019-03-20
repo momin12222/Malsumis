@@ -28,8 +28,6 @@ public class SoundManagerScript : MonoBehaviour
             case "Bullet":
                 print("Bullet");
                 audioSrc.PlayOneShot(BulletSound);
-                audioSrc.pitch = 7f;
-                audioSrc.volume = 0.05f;
                 break;
             case "Dash":
                 print("Dash");
@@ -42,8 +40,6 @@ public class SoundManagerScript : MonoBehaviour
             case "Hit":
                 print("Hit");
                 audioSrc.PlayOneShot(HitSound);
-                audioSrc.pitch = 6f;
-                audioSrc.volume = 1.25f;
                 break;
             default:
                 print("no sound loaded");
