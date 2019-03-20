@@ -42,6 +42,7 @@ public class BossController : MonoBehaviour
         StartCoroutine("Dash");
         StartCoroutine("Fireball");
         StartCoroutine(CheckPoint(spawnPoint));
+        StartCoroutine(CheckPoint(dashCollider.transform));
     }
 
     void Update()
