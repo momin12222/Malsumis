@@ -15,7 +15,7 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: Malsumis
   defaultCursor: {fileID: 2800000, guid: 3f3051a581a572b4fb107f9e4f41d53a, type: 3}
-  cursorHotspot: {x: 0, y: 0}
+  cursorHotspot: {x: 0.5, y: 0.5}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
