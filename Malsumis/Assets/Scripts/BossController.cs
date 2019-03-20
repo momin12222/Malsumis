@@ -25,8 +25,6 @@ public class BossController : MonoBehaviour
     public float fireRate;
 
     private bool dashing;
-    public Image dashIndicator;
-    public Image fireballIndicator;
 
     void Start()
     {
@@ -80,7 +78,6 @@ public class BossController : MonoBehaviour
             dashing = true;
             dashPoint.transform.position = new Vector3(dashPoint.position.x, transform.position.y, transform.position.z);
             dashCollider.gameObject.SetActive(true);
-            dashIndicator.gameObject.SetActive(false);
         }
     }
 
@@ -90,7 +87,6 @@ public class BossController : MonoBehaviour
         {
             yield return new WaitForSeconds(fireRate);
             shootingScript.Fireball(spawnPoint);
-            fireballIndicator.gameObject.SetActive(false);
         }
     }
 
