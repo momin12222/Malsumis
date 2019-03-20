@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 448}
   m_MaxSize: {x: 22012, y: 10024}
   vertical: 0
-  controlID: 133
+  controlID: 123
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 448}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 72
+  controlID: 124
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,8 +161,8 @@ MonoBehaviour:
     y: 0
     width: 212
     height: 947
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -303,7 +303,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e4abffff80b7ffff98baffff7abeffffbec5ffffb4dcffffe2ddfffff8e1ffff60e7ffff92ebffff02f0ffffaaf0ffff9ef9ffffe4faffffd4fbffff202e0000ee370000903f000030440000225100009a53000050660000b26800001c6c0000a4720000
+      m_ExpandedIDs: 98f8ffffd4fbffff940d0000fc2d0000682e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -400,20 +400,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/UI
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/UI
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\rutas\Desktop\GitHub\Malsumis\Malsumis
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4e0c0000
-    m_LastClickedID: 3150
-    m_ExpandedIDs: 0000000094090000ba0900001e0a0000720b0000a80b0000860c0000940c000000ca9a3b
+    m_SelectedIDs: b4090000
+    m_LastClickedID: 2484
+    m_ExpandedIDs: 0000000096090000bc090000200a0000740b0000aa0b00008a0c0000980c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -441,7 +441,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000094090000ba0900001e0a0000720b0000a80b0000860c0000940c0000
+    m_ExpandedIDs: 0000000096090000bc090000200a0000740b0000aa0b00008a0c0000980c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -607,9 +607,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 666.7564, y: -49.30698, z: -3.7988744}
+    m_Target: {x: -4.6309385, y: 0.12574264, z: -10.079309}
     speed: 2
-    m_Value: {x: 666.7564, y: -49.30698, z: -3.7988744}
+    m_Value: {x: -4.6309385, y: 0.12574264, z: -10.079309}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -641,9 +641,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 647.7878
+    m_Target: 29.938961
     speed: 2
-    m_Value: 647.7878
+    m_Value: 29.938961
   m_Ortho:
     m_Target: 1
     speed: 2

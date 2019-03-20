@@ -2308,6 +2308,11 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2097936650002173273, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
+        type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2097936650002173274, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
         type: 3}
       propertyPath: fadeTime
