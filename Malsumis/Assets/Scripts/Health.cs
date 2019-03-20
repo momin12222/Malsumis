@@ -17,6 +17,8 @@ public class Health : MonoBehaviour
 
     public void TakeDemange(int amount)
     {
+        //This makes hit sound.
+        SoundManagerScript.PlaySound("Hit");
         StartCoroutine("Blink");
         currentHP -= amount;
         if (currentHP <= 0)
@@ -51,9 +53,7 @@ public class Health : MonoBehaviour
     }
 
     IEnumerator Blink()
-    {
-        //This makes hit sound.
-        SoundManagerScript.PlaySound("Hit");
+    { 
         gameObject.GetComponent<SpriteRenderer>().material.color = Color.gray;
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<SpriteRenderer>().material.color = Color.white;
