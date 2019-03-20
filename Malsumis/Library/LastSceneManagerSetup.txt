@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/CodeTest.unity
+=======
+- path: Assets/Scenes/Controls.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
