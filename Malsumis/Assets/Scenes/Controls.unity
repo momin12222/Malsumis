@@ -252,7 +252,7 @@ PrefabInstance:
     - target: {fileID: 2097936650002173274, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
         type: 3}
       propertyPath: fadeTime
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2097936650002173274, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
         type: 3}
@@ -411,7 +411,7 @@ PrefabInstance:
     - target: {fileID: 2097936650002173274, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
         type: 3}
       propertyPath: fadeTime
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2097936650002173274, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
         type: 3}
