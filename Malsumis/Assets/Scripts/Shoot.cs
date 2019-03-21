@@ -24,8 +24,6 @@ public class Shoot : MonoBehaviour
     {
         if (Time.time > fireCooldown)
         {
-            //This makes fireball sounds when activated.
-            SoundManagerScript.PlaySound("Fireball");
             fireCooldown = Time.time + fireRate;
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0f, 0f, 15f));
