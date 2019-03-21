@@ -10,10 +10,6 @@ public class SoundManagerScript : MonoBehaviour
     void Start()
     {
         HitSound = Resources.Load<AudioClip>("Hit");
-        BulletSound = Resources.Load<AudioClip>("Bullet");
-        DashSound = Resources.Load<AudioClip>("Dash");
-        FireballSound = Resources.Load<AudioClip>("Fireball");
-        GSPSound = Resources.Load<AudioClip>("GSP");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -21,15 +17,6 @@ public class SoundManagerScript : MonoBehaviour
     {
         switch (clip)
         {
-            case "Fireball":
-                audioSrc.PlayOneShot(FireballSound);
-                break;
-            case "Dash":
-                audioSrc.PlayOneShot(DashSound);
-                break;
-            case "GSP":
-                audioSrc.PlayOneShot(GSPSound);
-                break;
             case "Hit":
                 audioSrc.PlayOneShot(HitSound);
                 break;
