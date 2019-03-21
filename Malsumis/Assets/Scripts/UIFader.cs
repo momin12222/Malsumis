@@ -23,11 +23,13 @@ public class UIFader : MonoBehaviour{
 
     public void FadeIn()
     {
+        Image.alpha = 0f;
         StartCoroutine(Fade(Image, Image.alpha, 1, fadeTime));
     }
 
     public void FadeOut()
     {
+        Image.alpha = 1f;
         StartCoroutine(Fade(Image, Image.alpha, 0, fadeTime));
     }
 
