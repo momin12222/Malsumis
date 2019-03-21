@@ -24,9 +24,6 @@ public class SoundManagerScript : MonoBehaviour
             case "Fireball":
                 audioSrc.PlayOneShot(FireballSound);
                 break;
-            case "Bullet":
-                audioSrc.PlayOneShot(BulletSound);
-                break;
             case "Dash":
                 audioSrc.PlayOneShot(DashSound);
                 break;

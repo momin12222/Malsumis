@@ -14,10 +14,7 @@ public class Shoot : MonoBehaviour
     public void ShootBullet(Transform spawnPoint)
     {
         if (Time.time > fireCooldown)
-        {
-            //This makes player bullet sounds when shooting.
-            SoundManagerScript.PlaySound("Bullet");
-                       
+        {              
             fireCooldown = Time.time + fireRate;
             StartCoroutine(TrippleShot(spawnPoint, bulletNumber, bulletDelay));
         }
