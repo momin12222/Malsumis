@@ -80,7 +80,6 @@ public class Spawner : MonoBehaviour
             if (evolve3)
             {
                 evolution3.SetActive(true);
-                Time.timeScale = 0f;
                 evolve3 = false;
                 StartCoroutine(LoadBoss());
             }

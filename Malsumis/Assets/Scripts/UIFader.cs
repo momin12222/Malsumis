@@ -23,12 +23,12 @@ public class UIFader : MonoBehaviour{
 
     public void FadeIn()
     {
-        StartCoroutine(Fade(Image, 0f, 1, fadeTime));
+        StartCoroutine(Fade(Image, 0f, 1f, fadeTime));
     }
 
     public void FadeOut()
     {
-        StartCoroutine(Fade(Image, 1f, 0, fadeTime));
+        StartCoroutine(Fade(Image, 1f, 0f, fadeTime));
     }
 
     public IEnumerator Fade(CanvasGroup cg, float start, float end, float lerpTime)

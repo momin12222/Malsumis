@@ -8,6 +8,11 @@ public class MainMenu : MonoBehaviour {
     public string level;
     public GameObject fade;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
     public void Play()
     {
         StartCoroutine(fadeWait(0.5f, fade, level));
