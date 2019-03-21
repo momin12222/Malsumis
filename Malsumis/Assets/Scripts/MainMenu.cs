@@ -10,13 +10,12 @@ public class MainMenu : MonoBehaviour {
 
     public void Play()
     {
-        StartCoroutine(fadeWait(1f, fade, level));
+        StartCoroutine(fadeWait(0.5f, fade, level));
     }
 
     public void LoadScene(string sceneName)
     {
-        print("Load");
-        StartCoroutine(fadeWait(1f, fade, sceneName));
+        StartCoroutine(fadeWait(0.5f, fade, sceneName));
     }
 
     public void Quit()

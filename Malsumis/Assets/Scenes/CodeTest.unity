@@ -2316,7 +2316,7 @@ PrefabInstance:
     - target: {fileID: 2097936650002173274, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
         type: 3}
       propertyPath: fadeTime
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2097936650002173274, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
         type: 3}
@@ -3737,6 +3737,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097936650002173274, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
+        type: 3}
+      propertyPath: fadeTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2617bdc88cb3d249a0d55ef8d95e9e9, type: 3}

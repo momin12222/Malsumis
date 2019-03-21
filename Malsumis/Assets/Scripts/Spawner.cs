@@ -60,8 +60,8 @@ public class Spawner : MonoBehaviour
             Activate(prefab2, true, false);
             if (evolve1)
             {
-                //evolution1.SetActive(true);
-                //Time.timeScale = 0f;
+                evolution1.SetActive(true);
+                Time.timeScale = 0f;
                 evolve1 = false;
             }
         }
@@ -70,8 +70,8 @@ public class Spawner : MonoBehaviour
             Activate(prefab3, true, true);
             if (evolve2)
             {
-                //evolution2.SetActive(true);
-                //Time.timeScale = 0f;
+                evolution2.SetActive(true);
+                Time.timeScale = 0f;
                 evolve2 = false;
             }
         }
@@ -80,7 +80,7 @@ public class Spawner : MonoBehaviour
             if (evolve3)
             {
                 evolution3.SetActive(true);
-                //Time.timeScale = 0f;
+                Time.timeScale = 0f;
                 evolve3 = false;
                 StartCoroutine(LoadBoss());
             }
