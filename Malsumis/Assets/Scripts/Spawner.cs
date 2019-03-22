@@ -38,14 +38,14 @@ public class Spawner : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         alien = GameObject.FindGameObjectWithTag("Alien").GetComponent<AlienController>();
 
-        player.progressBar.maxValue = range * 3;
-
         killCount = player.killCount;
         progressValue = player.killCount;
 
         evolve1 = true;
         evolve2 = true;
         evolve3 = true;
+
+        player.progressBar.maxValue = range * 3;
     }
 
     private void Update()

@@ -2816,7 +2816,7 @@ MonoBehaviour:
   timeMin: 2
   timeMax: 5
   range: 5
-  timeToBoss: 5
+  timeToBoss: 1
 --- !u!4 &1472749068
 Transform:
   m_ObjectHideFlags: 0
@@ -3715,7 +3715,7 @@ PrefabInstance:
     - target: {fileID: 2097936650002173274, guid: e2617bdc88cb3d249a0d55ef8d95e9e9,
         type: 3}
       propertyPath: fadeTime
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2617bdc88cb3d249a0d55ef8d95e9e9, type: 3}
