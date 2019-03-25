@@ -2815,7 +2815,7 @@ MonoBehaviour:
   time: 5
   timeMin: 2
   timeMax: 5
-  range: 5
+  range: 10
   timeToBoss: 1
 --- !u!4 &1472749068
 Transform:
