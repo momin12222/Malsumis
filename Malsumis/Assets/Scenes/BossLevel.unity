@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0011e447a745a6243b3e188fb558a80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHP: 75
+  startHP: 50
   currentHP: 0
   healthImages: []
 --- !u!114 &277374336
