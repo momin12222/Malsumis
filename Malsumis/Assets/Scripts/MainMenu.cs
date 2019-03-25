@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour {
 
     public string level;
     public GameObject fade;
+    public GameObject video;
 
     private void Start()
     {
@@ -31,6 +32,12 @@ public class MainMenu : MonoBehaviour {
     IEnumerator fadeWait(float time, GameObject fade, string sceneName)
     {
         fade.SetActive(true);
+        if (sceneName == "CodeTest")
+        {
+            video.SetActive(true);
+            yield return new WaitForSeconds(33);
+            video.SetActive(false);
+        }
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(sceneName);
     }
