@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -43,8 +44,7 @@ public class Health : MonoBehaviour
         if (gameObject.tag == "Enemy")
         {
             //add win here
-            GetComponent<BossController>().win.SetActive(true);
-            Time.timeScale = 0f;
+            SceneManager.LoadScene("End");
             //GameObject.FindGameObjectWithTag("UI").GetComponent<PauseMenu>().Death();
         }
         else if (gameObject.tag == "Enemy1" || gameObject.tag == "Enemy2" || gameObject.tag == "Enemy3")
