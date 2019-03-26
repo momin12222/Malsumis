@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3499993211057513704}
   - component: {fileID: 3499993211057513687}
   - component: {fileID: 3499993211057513686}
+  - component: {fileID: 5070235105642143927}
   - component: {fileID: 3499993211057513685}
   - component: {fileID: 3499993211057513684}
   - component: {fileID: 2443568919714406766}
@@ -90,15 +91,31 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3499993211057513683}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.14608899
+--- !u!70 &5070235105642143927
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3499993211057513683}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.14608899
+  m_Offset: {x: -0.0039654826, y: 0.0019826673}
+  m_Size: {x: 0.36942622, y: 0.24017395}
+  m_Direction: 1
 --- !u!114 &3499993211057513685
 MonoBehaviour:
   m_ObjectHideFlags: 0
