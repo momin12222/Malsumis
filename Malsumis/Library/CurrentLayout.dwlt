@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 498}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 498}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 448}
   m_MaxSize: {x: 22012, y: 10024}
   vertical: 0
-  controlID: 121
+  controlID: 10
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 448}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 28
+  controlID: 23
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -213,8 +213,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 731
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -318,7 +318,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -331,18 +331,18 @@ MonoBehaviour:
       y: 17
       width: 819
       height: 319
-    m_Scale: {x: 1.25, y: 1.25}
-    m_Translation: {x: 409.5, y: 159.5}
+    m_Scale: {x: 1.3261249, y: 1.3261249}
+    m_Translation: {x: 409.5, y: 158.73875}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -327.6
-      y: -127.6
-      width: 655.2
-      height: 255.2
+      x: -308.79443
+      y: -119.70121
+      width: 617.58887
+      height: 240.55049
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
@@ -383,9 +383,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.725284, y: -4.4585075, z: -0.070232995}
+    m_Target: {x: 0, y: 0, z: 90}
     speed: 2
-    m_Value: {x: -8.725284, y: -4.4585075, z: -0.070232995}
+    m_Value: {x: 0, y: 0, z: 90}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -417,9 +417,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 16.809816
+    m_Target: 67.28004
     speed: 2
-    m_Value: 16.809816
+    m_Value: 67.28004
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -460,23 +460,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b2faffff
-      m_LastClickedID: -1358
-      m_ExpandedIDs: c6faffffd4fbffffba2c0000
+      m_SelectedIDs: ba300000
+      m_LastClickedID: 12474
+      m_ExpandedIDs: f0f5fffff6f6ffff5afbffffd4fbffffaa2a0000cc2a000056300000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: UI
+        m_OriginalName: UI
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 12474
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -524,19 +524,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/New sprites/Menus
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/New sprites/Menus
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Admin\Desktop\Malsumis\Malsumis\Malsumis
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5e0a0000
-    m_LastClickedID: 2654
+    m_SelectedIDs: 900a0000
+    m_LastClickedID: 2704
     m_ExpandedIDs: 000000009c090000c40900002a0a0000880b0000c40b0000b00c0000be0c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
