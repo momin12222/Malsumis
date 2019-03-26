@@ -16,6 +16,7 @@ public class BossController : MonoBehaviour
     public Transform endPoint;
 
     public GameObject dashCollider;
+    public GameObject win;
 
     public float speed;
     public float dashSpeed;

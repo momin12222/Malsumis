@@ -23,6 +23,7 @@ TagManager:
   - top
   - bottom
   - Headshot
+  - Win
   layers:
   - Default
   - TransparentFX
