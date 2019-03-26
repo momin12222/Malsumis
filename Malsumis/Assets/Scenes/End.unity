@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f53182c9378494d878d7ded1104b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
+  time: 12
 --- !u!1 &825627354
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +346,12 @@ PrefabInstance:
       propertyPath: m_TargetCamera
       value: 
       objectReference: {fileID: 825627356}
+    - target: {fileID: 6060660869569125971, guid: 46989d195b6b18b40b858596633850ea,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 47f22b329f300e74d90a618bcb7f3a70,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46989d195b6b18b40b858596633850ea, type: 3}
 --- !u!1 &1943678306
