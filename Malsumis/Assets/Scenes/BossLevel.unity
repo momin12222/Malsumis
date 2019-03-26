@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0011e447a745a6243b3e188fb558a80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHP: 2
+  startHP: 50
   currentHP: 0
   healthImages: []
 --- !u!114 &277374336
@@ -268,7 +268,6 @@ MonoBehaviour:
   dashPoint: {fileID: 1546539790}
   endPoint: {fileID: 1408862911}
   dashCollider: {fileID: 631536999}
-  win: {fileID: 1211873976}
   speed: 7
   dashSpeed: 35
   dashRate: 7
